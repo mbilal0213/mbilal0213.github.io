@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#120b12">
+<title>Sahiba My World 🫀🌍</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(150,70,100,.16), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(100,50,80,.14), transparent 30%),
+    #0d080d;
+  color: #f8edf2;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.5) 1px, transparent 1px);
+  background-size: 70px 70px;
+  opacity: .08;
+  z-index: -1;
+}
+
+section {
+  min-height: 100vh;
+  padding: 80px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.small-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d9a8ba;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(42px, 11vw, 82px);
+  line-height: 1.05;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: clamp(32px, 8vw, 52px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 17px;
+  color: #e8dce2;
+}
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10% { transform: scale(1.12); }
+  20% { transform: scale(1); }
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 30px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(10px);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,.15);
+  transform: translateY(-2px);
+}
+
+.divider {
+  width: 70px;
+  height: 1px;
+  background: rgba(255,255,255,.3);
+  margin: 28px auto;
+}
+
+/* HOME */
+
+#home {
+  min-height: 100vh;
+  position: relative;
+}
+
+.home-content {
+  animation: fadeUp 1.5s ease;
+}
+
+.home-subtitle {
+  max-width: 520px;
+  margin: auto;
+  font-size: 18px;
+  color: #d8c3cc;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* STORY */
+
+.story-card {
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 28px;
+  padding: 35px 25px;
+  box-shadow: 0 20px 70px rgba(0,0,0,.3);
+}
+
+.story-card p {
+  margin-bottom: 20px;
+}
+
+/* PHOTOS */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.photo-placeholder {
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  border: 1px dashed rgba(255,255,255,.25);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bca9b2;
+  font-size: 13px;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LOVE CARDS */
+
+.love-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.love-card {
+  padding: 25px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.09);
+  text-align: left;
+}
+
+.love-card span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #d7a6b9;
+  margin-bottom: 7px;
+}
+
+.love-card h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+
+/* VOICE */
+
+.voice-box {
+  margin-top: 35px;
+  padding: 30px 22px;
+  border-radius: 28px;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.voice-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.voice-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.voice-note {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* BIRTHDAY */
+
+.birthday {
+  background:
+    radial-gradient(circle at center, rgba(135,55,90,.2), transparent 55%);
+}
+
+.date {
+  font-size: clamp(48px, 14vw, 100px);
+  letter-spacing: 5px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.birthday-message {
+  max-width: 650px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.birthday-message p {
+  margin-bottom: 20px;
+}
+
+.signature {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 22px;
+  color: #e5bdcc;
+}
+
+/* FUTURE */
+
+.future-card {
+  padding: 45px 25px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+}
+
+.lock {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+/* SECRET */
+
+.secret-area {
+  min-height: 80vh;
+}
+
+.secret-card {
+  padding: 40px 25px;
+  border-radius: 30px;
+  background: linear-gradient(
+    145deg,
+    rgba(120,50,85,.2),
+    rgba(255,255,255,.035)
+  );
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.secret-message {
+  display: none;
+  margin-top: 30px;
+  animation: fadeUp .8s ease;
+}
+
+.secret-message.show {
+  display: block;
+}
+
+.secret-button {
+  background: none;
+  border: none;
+  color: #a98c99;
+  font-family: inherit;
+  font-size: 12px;
+  margin-top: 45px;
+  cursor: pointer;
+}
+
+footer {
+  padding: 35px 20px 60px;
+  text-align: center;
+  color: #806d76;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 650px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .love-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section {
+    padding: 100px 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HOME ================= -->
+
+<section id="home">
+  <div class="container home-content">
+
+    <div class="small-label">A little world made for you</div>
+
+    <h1>
+      Sahiba My World
+      <span class="heart">🫀</span><br>
+      🌍
+    </h1>
+
+    <div class="divider"></div>
+
+    <p class="home-subtitle">
+      A little piece of my heart, made just for you.
+    </p>
+
+    <a href="#before-you" class="btn">
+      Enter My World
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ================= BEFORE YOU ================= -->
+
+<section id="before-you">
+  <div class="container">
+
+    <div class="small-label">Before You</div>
+
+    <h2>Before you came into my life…</h2>
+
+    <div class="story-card">
+
+      <p>
+        Meri zindagi mein bohat si cheezein apni jagah par thi,
+        lekin ek khaali si jagah hamesha mehsoos hoti thi.
+      </p>
+
+      <p>
+        Phir tum meri life mein aayi…
+      </p>
+
+      <p>
+        Aur mujhe pata bhi nahi chala ke kab tum ek simple person
+        se meri duniya ka sabse khoobsurat hissa ban gayi.
+      </p>
+
+      <p>
+        Shayad isi liye main tumhein kehta hoon…
+      </p>
+
+      <h2>My Cute World 🫀🌍</h2>
+
+    </div>
+
+    <a href="#then-you" class="btn">Keep going</a>
+
+  </div>
+</section>
+
+
+<!-- ================= MEMORIES ================= -->
+
+<section id="then-you">
+  <div class="container">
+
+    <div class="small-label">Our Memories</div>
+
+    <h2>Then You Happened.</h2>
+
+    <p>
+      Kuch moments words se explain nahi hote.
+      Isliye yahan kuch jagah sirf humari memories ke liye hai.
+    </p>
+
+    <div class="photo-grid">
+
+      <!-- PHOTO PLACEHOLDERS -->
+
+      <div class="photo-placeholder">
+        PHOTO 01
+      </div>
+
+      <div class="photo-placeholder">
+        PHOTO 02
+      </div>
+
+      <div class="photo-placeholder">
+        PHOTO 03
+      </div>
+
+      <div class="photo-placeholder">
+        PHOTO 04
+      </div>
+
+      <div class="photo-placeholder">
+        PHOTO 05
+      </div>
+
+      <div class="photo-placeholder">
+        PHOTO 06
+      </div>
+
+    </div>
+
+    <a href="#things-i-love" class="btn">Next</a>
+
+  </div>
+</section>
+
+
+<!-- ================= THINGS I LOVE ================= -->
+
+<section id="things-i-love">
+  <div class="container">
+
+    <div class="small-label">A Few Things</div>
+
+    <h2>Things I Love About You</h2>
+
+    <div class="love-grid">
+
+      <div class="love-card">
+        <span>01</span>
+        <h3>Your Smile</h3>
+        <p>
+          Tumhari smile meri favourite cheezon mein se ek hai.
+        </p>
+      </div>
+
+      <div class="love-card">
+        <span>02</span>
+        <h3>Your Presence</h3>
+        <p>
+          Tum paas ho ya door, tumhari presence hamesha feel hoti hai.
+        </p>
+      </div>
+
+      <div class="love-card">
+        <span>03</span>
+        <h3>Your Heart</h3>
+        <p>
+          Tum jis tarah care karti ho, woh mere liye bohat special hai.
+        </p>
+      </div>
+
+      <div class="love-card">
+        <span>04</span>
+        <h3>Simply You</h3>
+        <p>
+          Aur sabse simple jawab… mujhe bas tum pasand ho. Tum.
+        </p>
+      </div>
+
+    </div>
+
+    <a href="#voice-one" class="btn">Listen to something</a>
+
+  </div>
+</section>
+
+
+<!-- ================= VOICE NOTE 01 ================= -->
+
+<section id="voice-one">
+  <div class="container">
+
+    <div class="small-label">Voice Message 01</div>
+
+    <h2>Ye pehle sunna…</h2>
+
+    <div class="voice-box">
+
+      <div class="voice-icon">🎧</div>
+
+      <div class="voice-title">
+        A message from me to you
+      </div>
+
+      <p>
+        Don’t read this one. Just listen.
+      </p>
+
+      <!-- AUDIO PLACEHOLDER -->
+      <audio class="voice-note" controls>
+        <source src="audio/voice01.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+
+      <p style="font-size:12px;margin-top:12px;color:#8e7d85;">
+        Voice file will be added later.
+      </p>
+
+    </div>
+
+    <a href="#voice-two" class="btn">Next</a>
+
+  </div>
+</section>
+
+
+<!-- ================= VOICE NOTE 02 ================= -->
+
+<section id="voice-two">
+  <div class="container">
+
+    <div class="small-label">Voice Message 02</div>
+
+    <h2>Tumhare liye kuch kehna tha…</h2>
+
+    <div class="voice-box">
+
+      <div class="voice-icon">🎙️</div>
+
+      <div class="voice-title">
+        Just listen…
+      </div>
+
+      <p>
+        Is message ko thoda dil se sunna. 🫀
+      </p>
+
+      <!-- AUDIO PLACEHOLDER -->
+      <audio class="voice-note" controls>
+        <source src="audio/voice02.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+
+      <p style="font-size:12px;margin-top:12px;color:#8e7d85;">
+        Voice file will be added later.
+      </p>
+
+    </div>
+
+    <a href="#birthday" class="btn">Continue</a>
+
+  </div>
+</section>
+
+
+<!-- ================= BIRTHDAY REVEAL ================= -->
+
+<section id="birthday" class="birthday">
+  <div class="container">
+
+    <div class="small-label">Your Day</div>
+
+    <div class="date">
+      09 OCTOBER
+    </div>
+
+    <h2>
+      The day my world got a little more beautiful.
+      🫀🌍
+    </h2>
+
+    <h2 style="margin-top:35px;">
+      Happy Birthday, Sahiba. ❤️
+    </h2>
+
+    <div class="birthday-message">
+
+      <p>
+        Aaj tumhara birthday hai, lekin sach kahun toh mere liye
+        ye sirf tumhari birthday date nahi hai.
+      </p>
+
+      <p>
+        Ye woh din hai jis din meri zindagi mein woh insaan aayi,
+        jo dheere dheere meri duniya ka sabse khoobsurat hissa ban gayi.
+      </p>
+
+      <p>
+        Do saal ho gaye hain humare saath… aur in do saalon mein
+        tum meri aadat bhi bani, meri khushi bhi, meri comfort bhi
+        aur meri sabse pyari feeling bhi.
+      </p>
+
+      <p>
+        Kaash aaj main tumhare paas hota…
+        tumhare saamne baith kar tumhein birthday wish karta,
+        tumhari smile dekhta aur tumhein khud kehta ke tum mere
+        liye kitni special ho.
+      </p>
+
+      <p>
+        Lekin faasla hai… aur main tumhare paas nahi aa sakta.
+      </p>
+
+      <p>
+        Isliye maine socha, kyun na apni taraf se tumhare liye
+        ek chhoti si duniya bana doon?
+      </p>
+
+      <p>
+        Ye website usi duniya ka ek chhota sa hissa hai.
+      </p>
+
+      <p>
+        Aur agar kabhi tumhein lage ke tum mere liye kitni important ho…
+        toh bas is page ko dobara khol lena.
+      </p>
+
+    </div>
+
+    <div class="signature">
+
+      Tum meri Sahiba ho.<br>
+      Meri Jaan.<br>
+      Meri Shehzadi.<br>
+      Mera Dil.<br>
+      Meri Dhadkan.<br><br>
+
+      Aur hamesha…<br>
+
+      <strong>My Cute World. 🫀🌍</strong>
+
+      <br><br>
+
+      Happy Birthday, meri Jaan. ❤️
+
+    </div>
+
+    <a href="#future" class="btn">One more thing…</a>
+
+  </div>
+</section>
+
+
+<!-- ================= FUTURE ================= -->
+
+<section id="future">
+  <div class="container">
+
+    <div class="future-card">
+
+      <div class="lock">🔒</div>
+
+      <div class="small-label">Future</div>
+
+      <h2>This page is not available yet.</h2>
+
+      <p>
+        Shayad kuch cheezein waqt ke saath aur khoobsurat hoti hain.
+      </p>
+
+      <p style="margin-top:15px;">
+        Come back next year. 🌍
+      </p>
+
+    </div>
+
+    <a href="#secret" class="btn">Wait…</a>
+
+  </div>
+</section>
+
+
+<!-- ================= SECRET PAGE ================= -->
+
+<section id="secret" class="secret-area">
+  <div class="container">
+
+    <div class="secret-card">
+
+      <div class="small-label">Something Hidden</div>
+
+      <h2>🔒 One Last Thing</h2>
+
+      <p>
+        Tum yahan tak aa hi gayi…
+      </p>
+
+      <button class="secret-button" onclick="unlockSecret()">
+        tap here quietly…
+      </button>
+
+      <div id="secretMessage" class="secret-message">
+
+        <div class="divider"></div>
+
+        <h2>SECRET PAGE UNLOCKED 🫀</h2>
+
+        <p style="margin-top:20px;">
+          Agar tum ye dekh rahi ho,
+          iska matlab tumne meri chhoti si duniya ka
+          last corner bhi dhoond liya.
+        </p>
+
+        <p style="margin-top:20px;">
+          Aur honestly…
+          meri duniya ka sabse beautiful part
+          tum hi ho.
+        </p>
+
+        <p style="margin-top:25px;">
+          I love you, Sahiba. 🫀
+        </p>
+
+        <p style="margin-top:15px;">
+          Happy Birthday, My Cute World. 🌍
+        </p>
+
+        <!-- SECRET AUDIO PLACEHOLDER -->
+        <audio class="voice-note" controls style="margin-top:30px;">
+          <source src="audio/secret-voice.mp3" type="audio/mpeg">
+          Your browser does not support audio.
+        </audio>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  Made with love, only for Sahiba 🫀🌍
+</footer>
+
+
+<script>
+function unlockSecret() {
+  const message = document.getElementById("secretMessage");
+  message.classList.add("show");
+}
+</script>
+
+</body>
+        </html>
