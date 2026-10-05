@@ -329,8 +329,6 @@ p{
   animation:dividerReveal 1.2s ease forwards 1.1s;
 }
 
-/* NEW — LARGE WHITE 3D BIRTHDAY TEXT */
-
 .birthday-wish{
   font-family:Arial,sans-serif;
   font-size:clamp(28px,7vw,52px);
@@ -363,39 +361,51 @@ p{
 .birthday-message p:nth-child(1){
   animation:messageReveal 1s ease forwards 2.5s;
 }
+
 .birthday-message p:nth-child(2){
   animation:messageReveal 1s ease forwards 2.8s;
 }
+
 .birthday-message p:nth-child(3){
   animation:messageReveal 1s ease forwards 3.1s;
 }
+
 .birthday-message p:nth-child(4){
   animation:messageReveal 1s ease forwards 3.4s;
 }
+
 .birthday-message p:nth-child(5){
   animation:messageReveal 1s ease forwards 3.7s;
 }
+
 .birthday-message p:nth-child(6){
   animation:messageReveal 1s ease forwards 4s;
 }
+
 .birthday-message p:nth-child(7){
   animation:messageReveal 1s ease forwards 4.3s;
 }
+
 .birthday-message p:nth-child(8){
   animation:messageReveal 1s ease forwards 4.6s;
 }
+
 .birthday-message p:nth-child(9){
   animation:messageReveal 1s ease forwards 4.9s;
 }
+
 .birthday-message p:nth-child(10){
   animation:messageReveal 1s ease forwards 5.2s;
 }
+
 .birthday-message p:nth-child(11){
   animation:messageReveal 1s ease forwards 5.5s;
 }
+
 .birthday-message p:nth-child(12){
   animation:messageReveal 1s ease forwards 5.8s;
 }
+
 .birthday-message p:nth-child(13){
   animation:messageReveal 1s ease forwards 6.1s;
 }
@@ -507,7 +517,7 @@ p{
   margin-bottom:28px;
 }
 
-/* SECRET PHOTOS */
+/* SECRET PHOTOS — 9:16 */
 
 .secret-photo-grid{
   display:grid;
@@ -521,13 +531,15 @@ p{
   background:#101014;
   padding:9px;
   box-shadow:0 20px 55px rgba(0,0,0,.25);
+  overflow:hidden;
 }
 
 .secret-photo-placeholder{
-  aspect-ratio:1/1;
+  aspect-ratio:9/16;
   display:flex;
   align-items:center;
   justify-content:center;
+  overflow:hidden;
   background:
     linear-gradient(135deg,#15151a,#0b0b0e);
   color:#6d6d72;
@@ -537,6 +549,13 @@ p{
   text-transform:uppercase;
 }
 
+.secret-photo-placeholder img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
 .secret-photo-caption{
   padding:18px 8px 12px;
   color:#c9c4c0;
@@ -544,7 +563,7 @@ p{
   line-height:1.7;
 }
 
-/* SECRET VIDEOS */
+/* SECRET VIDEOS — 9:16 */
 
 .secret-video-list{
   display:grid;
@@ -559,10 +578,14 @@ p{
 }
 
 .video-placeholder{
-  aspect-ratio:16/9;
+  aspect-ratio:9/16;
+  width:100%;
+  max-width:430px;
+  margin:0 auto;
   display:flex;
   align-items:center;
   justify-content:center;
+  overflow:hidden;
   background:
     radial-gradient(circle at center,rgba(255,255,255,.05),transparent 50%),
     #0a0a0d;
@@ -571,6 +594,48 @@ p{
   font-size:10px;
   letter-spacing:2px;
   text-transform:uppercase;
+}
+
+.video-placeholder video{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  background:#000;
+}
+
+/* 7TH AI BIRTHDAY VIDEO — 16:9 */
+
+.birthday-video-card{
+  border:1px solid rgba(255,255,255,.12);
+  background:#101014;
+  padding:10px;
+  margin-top:45px;
+}
+
+.birthday-video-placeholder{
+  aspect-ratio:16/9;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at center,rgba(255,255,255,.07),transparent 50%),
+    #0a0a0d;
+  color:#666;
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  overflow:hidden;
+}
+
+.birthday-video-placeholder video{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  background:#000;
 }
 
 .video-caption{
@@ -831,10 +896,22 @@ p{
     right:12px;
     bottom:12px;
   }
+
+  .secret-photo-placeholder{
+    max-width:430px;
+    margin:0 auto;
+  }
+
+  .video-placeholder{
+    max-width:430px;
+  }
+
+  .birthday-video-placeholder{
+    width:100%;
+  }
 }
 
 @media(prefers-reduced-motion:reduce){
-
   *,
   *::before,
   *::after{
@@ -857,6 +934,7 @@ p{
 <body>
 
 <!-- BACKGROUND MUSIC -->
+
 <audio id="backgroundMusic" loop preload="auto">
   <source src="audio/seven_hundred_days.mp3" type="audio/mpeg">
 </audio>
@@ -903,7 +981,6 @@ p{
 
 <section id="then">
   <div class="container">
-
     <div class="reveal">
       <div class="eyebrow">The Girl Who Became My World</div>
 
@@ -1204,7 +1281,7 @@ p{
 
     </div>
 
-    <!-- SIX SECRET PHOTO PLACEHOLDERS -->
+    <!-- SIX SECRET PHOTOS — 9:16 -->
 
     <div class="memory-title reveal-soft">
       Our Memories
@@ -1214,8 +1291,11 @@ p{
 
       <div class="secret-photo-card reveal-soft">
         <div class="secret-photo-placeholder">
-          Photo 01
+          <img
+            src="photos/IMG_0083.HEIC"
+            alt="Our memory 01">
         </div>
+
         <div class="secret-photo-caption">
           Ek tasveer… aur bohat saari feelings. ❤️
         </div>
@@ -1223,8 +1303,11 @@ p{
 
       <div class="secret-photo-card reveal-soft">
         <div class="secret-photo-placeholder">
-          Photo 02
+          <img
+            src="photos/IMG-20261005-WA0016.jpg"
+            alt="Our memory 02">
         </div>
+
         <div class="secret-photo-caption">
           Kuch moments waqt se zyada khoobsurat hote hain.
         </div>
@@ -1232,8 +1315,11 @@ p{
 
       <div class="secret-photo-card reveal-soft">
         <div class="secret-photo-placeholder">
-          Photo 03
+          <img
+            src="photos/837739223_2498818320602662_2583674320033380541_n~2.jpg"
+            alt="Our memory 03">
         </div>
+
         <div class="secret-photo-caption">
           Ye pal mere liye hamesha special rahega.
         </div>
@@ -1241,8 +1327,11 @@ p{
 
       <div class="secret-photo-card reveal-soft">
         <div class="secret-photo-placeholder">
-          Photo 04
+          <img
+            src="photos/835217297_2586626921781395_5572834218967554773_n~2.jpg"
+            alt="Our memory 04">
         </div>
+
         <div class="secret-photo-caption">
           Tumhari ek smile… aur mera poora din.
         </div>
@@ -1250,8 +1339,11 @@ p{
 
       <div class="secret-photo-card reveal-soft">
         <div class="secret-photo-placeholder">
-          Photo 05
+          <img
+            src="photos/834420775_1790502455303832_9050202259590965079_n.webp"
+            alt="Our memory 05">
         </div>
+
         <div class="secret-photo-caption">
           Humari kahani ke kuch aur khoobsurat pal.
         </div>
@@ -1259,8 +1351,11 @@ p{
 
       <div class="secret-photo-card reveal-soft">
         <div class="secret-photo-placeholder">
-          Photo 06
+          <img
+            src="photos/833964935_1094658093318842_8566956730759267504_n.webp"
+            alt="Our memory 06">
         </div>
+
         <div class="secret-photo-caption">
           Aur ye memory… sirf meri favourite person ke naam.
         </div>
@@ -1268,7 +1363,7 @@ p{
 
     </div>
 
-    <!-- SIX SECRET VIDEO PLACEHOLDERS -->
+    <!-- SIX SECRET VIDEOS — 9:16 -->
 
     <div class="memory-title reveal-soft">
       Little Moments
@@ -1277,57 +1372,172 @@ p{
     <div class="secret-video-list">
 
       <div class="secret-video-card reveal-soft">
+
         <div class="video-placeholder">
-          Video 01
+
+          <video
+            class="memory-video"
+            controls
+            playsinline
+            preload="metadata">
+            <source
+              src="video/IMG_0085.MP4"
+              type="video/mp4">
+          </video>
+
         </div>
+
         <div class="video-caption">
           Kuch moments bas dobara jeene ke liye hote hain.
         </div>
+
       </div>
 
       <div class="secret-video-card reveal-soft">
+
         <div class="video-placeholder">
-          Video 02
+
+          <video
+            class="memory-video"
+            controls
+            playsinline
+            preload="metadata">
+            <source
+              src="video/IMG_0096.MOV"
+              type="video/quicktime">
+          </video>
+
         </div>
+
         <div class="video-caption">
           Tum… meri favourite memories ka sabse khoobsurat hissa ho.
         </div>
+
       </div>
 
       <div class="secret-video-card reveal-soft">
+
         <div class="video-placeholder">
-          Video 03
+
+          <video
+            class="memory-video"
+            controls
+            playsinline
+            preload="metadata">
+            <source
+              src="video/IMG_0103.MOV"
+              type="video/quicktime">
+          </video>
+
         </div>
+
         <div class="video-caption">
           Ek aur moment jo main kabhi bhoolna nahi chahta.
         </div>
+
       </div>
 
       <div class="secret-video-card reveal-soft">
+
         <div class="video-placeholder">
-          Video 04
+
+          <video
+            class="memory-video"
+            controls
+            playsinline
+            preload="metadata">
+            <source
+              src="video/VID-20261005-WA0012.mp4"
+              type="video/mp4">
+          </video>
+
         </div>
+
         <div class="video-caption">
           Do saal… aur itni saari memories.
         </div>
+
       </div>
 
       <div class="secret-video-card reveal-soft">
+
         <div class="video-placeholder">
-          Video 05
+
+          <video
+            class="memory-video"
+            controls
+            playsinline
+            preload="metadata">
+            <source
+              src="video/VID-20261005-WA0027.mp4"
+              type="video/mp4">
+          </video>
+
         </div>
+
         <div class="video-caption">
           Distance ke bawajood, tum hamesha mere qareeb rahi.
         </div>
+
       </div>
 
       <div class="secret-video-card reveal-soft">
+
         <div class="video-placeholder">
-          Video 06
+
+          <video
+            class="memory-video"
+            controls
+            playsinline
+            preload="metadata">
+            <source
+              src="video/VID-20261005-WA0035.mp4"
+              type="video/mp4">
+          </video>
+
         </div>
+
         <div class="video-caption">
           Aur ye… humari kahani ka ek aur chhota sa hissa.
         </div>
+
+      </div>
+
+    </div>
+
+    <!-- 7TH VIDEO — AI BIRTHDAY VIDEO — 16:9 -->
+    <!--
+      IMPORTANT:
+      Abhi filename intentionally empty hai.
+      AI birthday video ready hone ke baad sirf source filename add karna hai.
+    -->
+
+    <div class="memory-title reveal-soft">
+      Your Birthday Video ❤️
+    </div>
+
+    <div class="birthday-video-card reveal-soft">
+
+      <div class="birthday-video-placeholder">
+
+        <!--
+        <video
+          class="birthday-video"
+          controls
+          playsinline
+          preload="metadata">
+          <source
+            src="video/YOUR_AI_BIRTHDAY_VIDEO_FILENAME.mp4"
+            type="video/mp4">
+        </video>
+        -->
+
+        7th Video — Coming Soon ❤️
+
+      </div>
+
+      <div class="video-caption">
+        Ye video… sirf tumhare birthday ke liye. ❤️
       </div>
 
     </div>
@@ -1346,7 +1556,9 @@ p{
       </p>
 
       <audio class="voice-note" controls>
-        <source src="audio/video_261005_073207.mp3" type="audio/mpeg">
+        <source
+          src="audio/video_261005_073207.mp3"
+          type="audio/mpeg">
       </audio>
 
     </div>
@@ -1356,7 +1568,9 @@ p{
     <div class="secret-ending reveal-soft">
 
       <p>Some memories become pictures.</p>
+
       <p>Some become stories.</p>
+
       <p>And some… become a part of you.</p>
 
       <p class="final-line">
@@ -1377,204 +1591,508 @@ p{
 </section>
 
 <script>
+
 /* ==========================================
    BACKGROUND MUSIC SYSTEM
    ========================================== */
 
-const backgroundMusic = document.getElementById("backgroundMusic");
-const musicToggle = document.getElementById("musicToggle");
+const backgroundMusic =
+  document.getElementById("backgroundMusic");
+
+const musicToggle =
+  document.getElementById("musicToggle");
 
 let musicStarted = false;
 let musicWasPlayingBeforeVoice = false;
+let musicWasPlayingBeforeVideo = false;
+
+
+/* ==========================================
+   START BACKGROUND MUSIC
+   ========================================== */
 
 function startBackgroundMusic(){
+
   if(!backgroundMusic) return;
 
   backgroundMusic.loop = true;
 
-  const playPromise = backgroundMusic.play();
+  const playPromise =
+    backgroundMusic.play();
 
   if(playPromise !== undefined){
+
     playPromise
       .then(() => {
+
         musicStarted = true;
         updateMusicButton();
+
       })
       .catch(() => {
+
         /*
           Mobile browsers may block autoplay.
-          The first user interaction will try again.
+          First user interaction will try again.
         */
+
       });
+
   }
+
 }
 
+
+/* ==========================================
+   MUSIC BUTTON
+   ========================================== */
+
 function updateMusicButton(){
+
   if(!musicToggle || !backgroundMusic) return;
 
   if(backgroundMusic.paused){
+
     musicToggle.textContent = "♪";
-    musicToggle.setAttribute("aria-label","Play background music");
+
+    musicToggle.setAttribute(
+      "aria-label",
+      "Play background music"
+    );
+
   }else{
+
     musicToggle.textContent = "♫";
-    musicToggle.setAttribute("aria-label","Pause background music");
+
+    musicToggle.setAttribute(
+      "aria-label",
+      "Pause background music"
+    );
+
   }
+
 }
 
+
+/* ==========================================
+   PAUSE MUSIC FOR VOICE NOTE
+   ========================================== */
+
 function pauseBackgroundForVoice(){
+
   if(!backgroundMusic) return;
 
-  musicWasPlayingBeforeVoice = !backgroundMusic.paused;
+  musicWasPlayingBeforeVoice =
+    !backgroundMusic.paused;
 
   if(musicWasPlayingBeforeVoice){
+
     backgroundMusic.pause();
+
   }
 
   updateMusicButton();
+
 }
 
+
+/* ==========================================
+   RESUME MUSIC AFTER VOICE NOTE
+   ========================================== */
+
 function resumeBackgroundAfterVoice(){
+
   if(!backgroundMusic) return;
 
   if(musicWasPlayingBeforeVoice){
-    const playPromise = backgroundMusic.play();
+
+    const playPromise =
+      backgroundMusic.play();
 
     if(playPromise !== undefined){
+
       playPromise.catch(() => {});
+
     }
+
   }
 
   musicWasPlayingBeforeVoice = false;
+
   updateMusicButton();
+
 }
 
-musicToggle.addEventListener("click",function(){
 
-  if(backgroundMusic.paused){
-    const playPromise = backgroundMusic.play();
+/* ==========================================
+   PAUSE MUSIC FOR VIDEO
+   ========================================== */
 
-    if(playPromise !== undefined){
-      playPromise.catch(() => {});
-    }
-  }else{
+function pauseBackgroundForVideo(){
+
+  if(!backgroundMusic) return;
+
+  musicWasPlayingBeforeVideo =
+    !backgroundMusic.paused;
+
+  if(musicWasPlayingBeforeVideo){
+
     backgroundMusic.pause();
+
   }
 
   updateMusicButton();
-});
 
-/*
-  Start music on the first real user interaction.
-  This keeps the experience compatible with mobile
-  browser autoplay restrictions.
-*/
+}
+
+
+/* ==========================================
+   RESUME MUSIC AFTER VIDEO
+   ========================================== */
+
+function resumeBackgroundAfterVideo(){
+
+  if(!backgroundMusic) return;
+
+  if(musicWasPlayingBeforeVideo){
+
+    const playPromise =
+      backgroundMusic.play();
+
+    if(playPromise !== undefined){
+
+      playPromise.catch(() => {});
+
+    }
+
+  }
+
+  musicWasPlayingBeforeVideo = false;
+
+  updateMusicButton();
+
+}
+
+
+/* ==========================================
+   MUSIC TOGGLE
+   ========================================== */
+
+musicToggle.addEventListener(
+  "click",
+  function(){
+
+    if(backgroundMusic.paused){
+
+      const playPromise =
+        backgroundMusic.play();
+
+      if(playPromise !== undefined){
+
+        playPromise.catch(() => {});
+
+      }
+
+    }else{
+
+      backgroundMusic.pause();
+
+    }
+
+    updateMusicButton();
+
+  }
+);
+
+
+/* ==========================================
+   FIRST USER INTERACTION MUSIC
+   ========================================== */
 
 function firstInteractionMusic(){
-  if(!musicStarted && backgroundMusic.paused){
+
+  if(!musicStarted &&
+     backgroundMusic.paused){
+
     startBackgroundMusic();
+
   }
 
   musicStarted = true;
 
-  document.removeEventListener("click",firstInteractionMusic);
-  document.removeEventListener("touchstart",firstInteractionMusic);
-  document.removeEventListener("pointerdown",firstInteractionMusic);
+  document.removeEventListener(
+    "click",
+    firstInteractionMusic
+  );
+
+  document.removeEventListener(
+    "touchstart",
+    firstInteractionMusic
+  );
+
+  document.removeEventListener(
+    "pointerdown",
+    firstInteractionMusic
+  );
+
 }
 
-document.addEventListener("click",firstInteractionMusic,{passive:true});
-document.addEventListener("touchstart",firstInteractionMusic,{passive:true});
-document.addEventListener("pointerdown",firstInteractionMusic,{passive:true});
+document.addEventListener(
+  "click",
+  firstInteractionMusic,
+  {passive:true}
+);
 
-/*
-  Voice Note coordination:
-  Whenever ANY voice note starts,
-  background music pauses.
-*/
+document.addEventListener(
+  "touchstart",
+  firstInteractionMusic,
+  {passive:true}
+);
 
-document.querySelectorAll(".voice-note").forEach(function(audio){
+document.addEventListener(
+  "pointerdown",
+  firstInteractionMusic,
+  {passive:true}
+);
 
-  audio.addEventListener("play",function(){
 
-    pauseBackgroundForVoice();
+/* ==========================================
+   VOICE NOTE COORDINATION
+   ========================================== */
 
-    const card = audio.closest(".voice-card, .secret-voice");
+document
+  .querySelectorAll(".voice-note")
+  .forEach(function(audio){
 
-    if(card){
-      card.classList.add("audio-playing");
-    }
+    audio.addEventListener(
+      "play",
+      function(){
+
+        /*
+          If another voice note/video is active,
+          its own system will already have paused
+          background music.
+        */
+
+        pauseBackgroundForVoice();
+
+        const card =
+          audio.closest(
+            ".voice-card, .secret-voice"
+          );
+
+        if(card){
+
+          card.classList.add(
+            "audio-playing"
+          );
+
+        }
+
+      }
+    );
+
+
+    audio.addEventListener(
+      "pause",
+      function(){
+
+        resumeBackgroundAfterVoice();
+
+        const card =
+          audio.closest(
+            ".voice-card, .secret-voice"
+          );
+
+        if(card){
+
+          card.classList.remove(
+            "audio-playing"
+          );
+
+        }
+
+      }
+    );
+
+
+    audio.addEventListener(
+      "ended",
+      function(){
+
+        resumeBackgroundAfterVoice();
+
+        const card =
+          audio.closest(
+            ".voice-card, .secret-voice"
+          );
+
+        if(card){
+
+          card.classList.remove(
+            "audio-playing"
+          );
+
+        }
+
+      }
+    );
 
   });
 
-  audio.addEventListener("pause",function(){
 
-    resumeBackgroundAfterVoice();
+/* ==========================================
+   VIDEO COORDINATION
+   ========================================== */
 
-    const card = audio.closest(".voice-card, .secret-voice");
+const allVideos =
+  document.querySelectorAll(
+    ".memory-video, .birthday-video"
+  );
 
-    if(card){
-      card.classList.remove("audio-playing");
+
+allVideos.forEach(function(video){
+
+  video.addEventListener(
+    "play",
+    function(){
+
+      /*
+        Pause every other video first.
+      */
+
+      allVideos.forEach(function(otherVideo){
+
+        if(otherVideo !== video &&
+           !otherVideo.paused){
+
+          otherVideo.pause();
+
+        }
+
+      });
+
+
+      /*
+        Pause background music while
+        this video is playing.
+      */
+
+      pauseBackgroundForVideo();
+
     }
+  );
 
-  });
 
-  audio.addEventListener("ended",function(){
+  video.addEventListener(
+    "pause",
+    function(){
 
-    resumeBackgroundAfterVoice();
+      /*
+        Resume background music when
+        the current video is stopped/paused.
+      */
 
-    const card = audio.closest(".voice-card, .secret-voice");
+      resumeBackgroundAfterVideo();
 
-    if(card){
-      card.classList.remove("audio-playing");
     }
+  );
 
-  });
+
+  video.addEventListener(
+    "ended",
+    function(){
+
+      /*
+        Resume background music when
+        the current video finishes.
+      */
+
+      resumeBackgroundAfterVideo();
+
+    }
+  );
 
 });
+
 
 /* ==========================================
    SCROLL REVEALS
    ========================================== */
 
-const revealElements = document.querySelectorAll(".reveal, .reveal-soft");
+const revealElements =
+  document.querySelectorAll(
+    ".reveal, .reveal-soft"
+  );
 
-const revealObserver = new IntersectionObserver(
-  function(entries,observer){
+const revealObserver =
+  new IntersectionObserver(
 
-    entries.forEach(function(entry){
+    function(entries,observer){
 
-      if(entry.isIntersecting){
+      entries.forEach(function(entry){
 
-        entry.target.classList.add("visible");
+        if(entry.isIntersecting){
 
-        observer.unobserve(entry.target);
+          entry.target.classList.add(
+            "visible"
+          );
 
-      }
+          observer.unobserve(
+            entry.target
+          );
 
-    });
+        }
 
-  },
-  {
-    threshold:0.12,
-    rootMargin:"0px 0px -60px 0px"
+      });
+
+    },
+
+    {
+      threshold:0.12,
+      rootMargin:
+        "0px 0px -60px 0px"
+    }
+
+  );
+
+
+revealElements.forEach(
+  function(element,index){
+
+    element.style.transitionDelay =
+      Math.min(
+        index * 0.055,
+        0.45
+      ) + "s";
+
+    revealObserver.observe(
+      element
+    );
+
   }
 );
 
-revealElements.forEach(function(element,index){
-
-  element.style.transitionDelay =
-    Math.min(index * 0.055,0.45) + "s";
-
-  revealObserver.observe(element);
-
-});
 
 /* ==========================================
    SECRET PAGE
    ========================================== */
 
-const secretButton = document.getElementById("secretButton");
-const secretGate = document.getElementById("secret-gate");
-const secretPage = document.getElementById("secret-page");
+const secretButton =
+  document.getElementById(
+    "secretButton"
+  );
+
+const secretGate =
+  document.getElementById(
+    "secret-gate"
+  );
+
+const secretPage =
+  document.getElementById(
+    "secret-page"
+  );
+
 
 function unlockSecret(){
 
@@ -1582,58 +2100,99 @@ function unlockSecret(){
     "opacity 1s ease, transform 1s ease, filter 1s ease";
 
   secretGate.style.opacity = "0";
-  secretGate.style.transform = "scale(.97)";
-  secretGate.style.filter = "blur(8px)";
 
-  setTimeout(function(){
+  secretGate.style.transform =
+    "scale(.97)";
 
-    secretGate.style.display = "none";
+  secretGate.style.filter =
+    "blur(8px)";
 
-    secretPage.style.display = "flex";
-    secretPage.classList.add("secret-page-revealed");
 
-    window.scrollTo({
-      top:0,
-      behavior:"auto"
-    });
+  setTimeout(
+    function(){
 
-    setTimeout(function(){
+      secretGate.style.display =
+        "none";
 
-      const secretElements =
-        secretPage.querySelectorAll(".reveal-soft");
+      secretPage.style.display =
+        "flex";
 
-      secretElements.forEach(function(element,index){
+      secretPage.classList.add(
+        "secret-page-revealed"
+      );
 
-        setTimeout(function(){
-          element.classList.add("visible");
-        },index * 120);
 
+      window.scrollTo({
+        top:0,
+        behavior:"auto"
       });
 
-    },100);
 
-  },900);
+      setTimeout(
+        function(){
+
+          const secretElements =
+            secretPage.querySelectorAll(
+              ".reveal-soft"
+            );
+
+
+          secretElements.forEach(
+            function(element,index){
+
+              setTimeout(
+                function(){
+
+                  element.classList.add(
+                    "visible"
+                  );
+
+                },
+                index * 120
+              );
+
+            }
+          );
+
+        },
+        100
+      );
+
+
+    },
+    900
+  );
+
 }
 
-secretButton.addEventListener("click",unlockSecret);
+
+secretButton.addEventListener(
+  "click",
+  unlockSecret
+);
+
 
 /* ==========================================
    INITIAL MUSIC ATTEMPT
    ========================================== */
 
-window.addEventListener("load",function(){
+window.addEventListener(
+  "load",
+  function(){
 
-  updateMusicButton();
+    updateMusicButton();
 
-  /*
-    Try once automatically.
-    If mobile browser blocks it,
-    first interaction starts the music.
-  */
+    /*
+      Try once automatically.
+      If mobile browser blocks it,
+      first interaction starts music.
+    */
 
-  startBackgroundMusic();
+    startBackgroundMusic();
 
-});
+  }
+);
+
 </script>
 
 </body>
