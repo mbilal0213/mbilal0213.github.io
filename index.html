@@ -301,6 +301,8 @@ p{
 .birthday-content{
   width:100%;
   max-width:800px;
+  margin:auto;
+  text-align:center;
 }
 
 .birthday-date{
@@ -310,14 +312,22 @@ p{
   letter-spacing:8px;
   line-height:1;
   margin-bottom:30px;
-  color:#f5f5f5;
+
+  /* 24K GOLD / MUSTARD GOLD */
+  color:#f6d36a;
+
+  text-align:center;
+
   text-shadow:
-    0 2px 0 rgba(255,255,255,.15),
-    0 8px 25px rgba(255,255,255,.16),
-    0 0 55px rgba(255,255,255,.08);
+    0 1px 0 #fff0a8,
+    0 2px 0 #d9ad3f,
+    0 5px 15px rgba(218,170,45,.38),
+    0 0 28px rgba(246,211,106,.28),
+    0 0 60px rgba(218,170,45,.16);
+
   animation:
     birthdayDateReveal 2s cubic-bezier(.2,.8,.2,1) forwards,
-    birthdayGlow 4s ease-in-out infinite 2s;
+    birthdayGoldGlow 4s ease-in-out infinite 2s;
 }
 
 .birthday-divider{
@@ -345,17 +355,20 @@ p{
     0 4px 0 rgba(190,190,190,.5),
     0 7px 15px rgba(255,255,255,.22),
     0 0 30px rgba(255,255,255,.16);
+  text-align:center;
 }
 
 .birthday-message{
   max-width:700px;
   margin:auto;
+  text-align:center;
 }
 
 .birthday-message p{
   margin-bottom:21px;
   opacity:0;
   transform:translateY(18px);
+  text-align:center;
 }
 
 .birthday-message p:nth-child(1){animation:messageReveal 1s ease forwards 2.5s}
@@ -380,6 +393,7 @@ p{
   color:#ddd;
   opacity:0;
   animation:signatureReveal 1.3s ease forwards 6.6s;
+  text-align:center;
 }
 
 /* SECRET GATE */
@@ -674,18 +688,29 @@ p{
   }
 }
 
-@keyframes birthdayGlow{
+/* 24K GOLD SHINE / GLOW */
+
+@keyframes birthdayGoldGlow{
   0%,100%{
+    color:#e8bd4f;
     text-shadow:
-      0 2px 0 rgba(255,255,255,.15),
-      0 8px 25px rgba(255,255,255,.16),
-      0 0 55px rgba(255,255,255,.08);
+      0 1px 0 #fff0a8,
+      0 2px 0 #c99b2e,
+      0 5px 15px rgba(218,170,45,.30),
+      0 0 25px rgba(246,211,106,.20),
+      0 0 50px rgba(218,170,45,.10);
+    filter:brightness(.96);
   }
+
   50%{
+    color:#ffe58a;
     text-shadow:
-      0 2px 0 rgba(255,255,255,.2),
-      0 8px 35px rgba(255,255,255,.2),
-      0 0 75px rgba(255,255,255,.12);
+      0 1px 0 #fff7c7,
+      0 2px 0 #e1b94e,
+      0 5px 18px rgba(238,194,72,.48),
+      0 0 35px rgba(246,211,106,.42),
+      0 0 75px rgba(218,170,45,.22);
+    filter:brightness(1.12);
   }
 }
 
@@ -759,6 +784,7 @@ p{
   .birthday-message p{
     font-size:15px;
     line-height:1.85;
+    text-align:center;
   }
 
   .secret-title{
@@ -793,7 +819,6 @@ aria-label="Pause background music">
 <!-- OPENING -->
 
 <section id="opening">
-
   <div class="container opening-content">
 
     <span class="opening-heart">🫀</span>
@@ -811,7 +836,6 @@ aria-label="Pause background music">
   <div class="scroll-hint">
     Scroll slowly ↓
   </div>
-
 </section>
 
 <!-- BEFORE YOU -->
@@ -901,7 +925,6 @@ aria-label="Pause background music">
     </div>
 
   </div>
-
 </section>
 
 <!-- THINGS I LOVE -->
@@ -931,7 +954,9 @@ aria-label="Pause background music">
 
       <div class="love-card reveal-soft">
         <div class="love-number">01</div>
+
         <h3>Tumhari Smile</h3>
+
         <p>
           Tumhari smile mein pata nahi kya baat hai,
           lekin mera mood automatically better ho jata hai.
@@ -940,7 +965,9 @@ aria-label="Pause background music">
 
       <div class="love-card reveal-soft">
         <div class="love-number">02</div>
+
         <h3>Tumhara Care</h3>
+
         <p>
           Tum jis tarah choti choti cheezon ka khayal rakhti ho,
           woh mere liye bohat special hai.
@@ -949,7 +976,9 @@ aria-label="Pause background music">
 
       <div class="love-card reveal-soft">
         <div class="love-number">03</div>
+
         <h3>Tumhari Voice</h3>
+
         <p>
           Tumhari awaaz mein ek ajeeb sa sukoon hai,
           jo words se zyada feel hota hai.
@@ -958,7 +987,9 @@ aria-label="Pause background music">
 
       <div class="love-card reveal-soft">
         <div class="love-number">04</div>
+
         <h3>Tumhara Saath</h3>
+
         <p>
           Faasla chahe jitna bhi ho,
           tumhara hona phir bhi mere liye bohat qareeb hai.
@@ -967,7 +998,9 @@ aria-label="Pause background music">
 
       <div class="love-card reveal-soft">
         <div class="love-number">05</div>
+
         <h3>Tumhari Masoomiyat</h3>
+
         <p>
           Tumhari woh simple si masoomiyat
           jo tumhein mere liye aur bhi special banati hai.
@@ -976,7 +1009,9 @@ aria-label="Pause background music">
 
       <div class="love-card reveal-soft">
         <div class="love-number">06</div>
+
         <h3>Bas Tum</h3>
+
         <p>
           Aur sab se zyada…
           mujhe tumhara sirf tum hona pasand hai.
@@ -986,7 +1021,6 @@ aria-label="Pause background music">
     </div>
 
   </div>
-
 </section>
 
 <!-- VOICE NOTE 01 -->
@@ -1014,15 +1048,16 @@ aria-label="Pause background music">
       </p>
 
       <audio class="voice-note" controls>
+
         <source
           src="audio/video_261005_061117.mp3"
           type="audio/mpeg">
+
       </audio>
 
     </div>
 
   </div>
-
 </section>
 
 <!-- VOICE NOTE 02 -->
@@ -1036,22 +1071,22 @@ aria-label="Pause background music">
     </div>
 
     <h2 class="section-title">
-      Ye bhi sunna…
+      Tumhare liye kuch kehna tha…
     </h2>
 
     <div class="voice-card reveal-soft">
 
       <h3>
-        Kaash Aaj…
+        Just Listen. ❤️
       </h3>
 
       <p>
-        Jo baat dil mein thi… woh tum tak pohanchani thi.
+        Isko thora araam se sunna…
       </p>
 
       <audio class="voice-note" controls>
         <source
-          src="audio/video_261005_061117.mp3"
+          src="audio/video_261005_062000.mp3"
           type="audio/mpeg">
       </audio>
 
@@ -1066,6 +1101,10 @@ aria-label="Pause background music">
 <section id="birthday">
 
   <div class="birthday-content">
+
+    <div class="eyebrow">
+      Birthday
+    </div>
 
     <div class="birthday-date">
       09 OCTOBER
@@ -1164,7 +1203,6 @@ aria-label="Pause background music">
     </button>
 
   </div>
-
 </section>
 
 <!-- SECRET PAGE -->
@@ -1284,7 +1322,7 @@ aria-label="Pause background music">
 
     </div>
 
-    <!-- SEVEN SECRET VIDEOS -->
+    <!-- SIX SECRET VIDEOS -->
 
     <div class="memory-title reveal-soft">
       Little Moments
@@ -1439,7 +1477,7 @@ aria-label="Pause background music">
           preload="metadata">
 
           <source
-            src="Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4"
+            src="video/Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4"
             type="video/mp4">
 
           Your browser does not support video playback.
@@ -1447,7 +1485,7 @@ aria-label="Pause background music">
         </video>
 
         <a
-          href="Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4"
+          href="video/Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4"
           download
           style="display:inline-flex;align-items:center;justify-content:center;margin:18px 10px 0;padding:12px 20px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#fff;text-decoration:none;font-family:Arial,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;">
 
@@ -1540,535 +1578,518 @@ let musicStarted = false;
 let musicWasPlayingBeforeVoice = false;
 let musicWasPlayingBeforeVideo = false;
 
-
 /* MUSIC START */
 
 function startBackgroundMusic(){
 
-  if(!backgroundMusic) return;
+if(!backgroundMusic) return;
 
-  backgroundMusic.loop = true;
+backgroundMusic.loop = true;
 
-  const playPromise =
-    backgroundMusic.play();
+const playPromise =
+backgroundMusic.play();
 
-  if(playPromise !== undefined){
+if(playPromise !== undefined){
 
-    playPromise
-      .then(function(){
+playPromise
+  .then(function(){
 
-        musicStarted = true;
-        updateMusicButton();
+    musicStarted = true;
+    updateMusicButton();
 
-      })
-      .catch(function(){});
-
-  }
+  })
+  .catch(function(){});
 
 }
 
+}
 
 /* MUSIC BUTTON */
 
 function updateMusicButton(){
 
-  if(!musicToggle || !backgroundMusic) return;
+if(!musicToggle || !backgroundMusic) return;
 
-  if(backgroundMusic.paused){
+if(backgroundMusic.paused){
 
-    musicToggle.textContent = "♪";
+musicToggle.textContent = "♪";
 
-    musicToggle.setAttribute(
-      "aria-label",
-      "Play background music"
-    );
+musicToggle.setAttribute(
+  "aria-label",
+  "Play background music"
+);
 
-  }else{
+}else{
 
-    musicToggle.textContent = "♫";
+musicToggle.textContent = "♫";
 
-    musicToggle.setAttribute(
-      "aria-label",
-      "Pause background music"
-    );
-
-  }
+musicToggle.setAttribute(
+  "aria-label",
+  "Pause background music"
+);
 
 }
 
+}
 
 /* VOICE MUSIC PAUSE */
 
 function pauseBackgroundForVoice(){
 
-  if(!backgroundMusic) return;
+if(!backgroundMusic) return;
 
-  musicWasPlayingBeforeVoice =
-    !backgroundMusic.paused;
+musicWasPlayingBeforeVoice =
+!backgroundMusic.paused;
 
-  if(musicWasPlayingBeforeVoice){
+if(musicWasPlayingBeforeVoice){
 
-    backgroundMusic.pause();
-
-  }
-
-  updateMusicButton();
+backgroundMusic.pause();
 
 }
 
+updateMusicButton();
+
+}
 
 /* VOICE MUSIC RESUME */
 
 function resumeBackgroundAfterVoice(){
 
-  if(!backgroundMusic) return;
+if(!backgroundMusic) return;
 
-  if(
-    musicWasPlayingBeforeVoice &&
-    !musicWasPlayingBeforeVideo
-  ){
+if(
+musicWasPlayingBeforeVoice &&
+!musicWasPlayingBeforeVideo
+){
 
-    backgroundMusic.play().catch(function(){});
-
-  }
-
-  musicWasPlayingBeforeVoice = false;
-
-  updateMusicButton();
+backgroundMusic.play().catch(function(){});
 
 }
 
+musicWasPlayingBeforeVoice = false;
+
+updateMusicButton();
+
+}
 
 /* VIDEO MUSIC PAUSE */
 
 function pauseBackgroundForVideo(){
 
-  if(!backgroundMusic) return;
+if(!backgroundMusic) return;
 
-  musicWasPlayingBeforeVideo =
-    !backgroundMusic.paused;
+musicWasPlayingBeforeVideo =
+!backgroundMusic.paused;
 
-  if(musicWasPlayingBeforeVideo){
+if(musicWasPlayingBeforeVideo){
 
-    backgroundMusic.pause();
-
-  }
-
-  updateMusicButton();
+backgroundMusic.pause();
 
 }
 
+updateMusicButton();
+
+}
 
 /* VIDEO MUSIC RESUME */
 
 function resumeBackgroundAfterVideo(){
 
-  if(!backgroundMusic) return;
+if(!backgroundMusic) return;
 
-  if(
-    musicWasPlayingBeforeVideo &&
-    !musicWasPlayingBeforeVoice
-  ){
+if(
+musicWasPlayingBeforeVideo &&
+!musicWasPlayingBeforeVoice
+){
 
-    backgroundMusic.play().catch(function(){});
-
-  }
-
-  musicWasPlayingBeforeVideo = false;
-
-  updateMusicButton();
+backgroundMusic.play().catch(function(){});
 
 }
 
+musicWasPlayingBeforeVideo = false;
+
+updateMusicButton();
+
+}
 
 /* MUSIC TOGGLE */
 
 musicToggle.addEventListener(
-  "click",
-  function(){
+"click",
+function(){
 
-    if(backgroundMusic.paused){
+if(backgroundMusic.paused){
 
-      backgroundMusic.play().catch(function(){});
+  backgroundMusic.play().catch(function(){});
 
-    }else{
+}else{
 
-      backgroundMusic.pause();
+  backgroundMusic.pause();
 
-    }
+}
 
-    updateMusicButton();
+updateMusicButton();
 
-  }
+}
 );
-
 
 /* FIRST USER INTERACTION */
 
 function firstInteractionMusic(){
 
-  if(
-    !musicStarted &&
-    backgroundMusic.paused
-  ){
+if(
+!musicStarted &&
+backgroundMusic.paused
+){
 
-    startBackgroundMusic();
+startBackgroundMusic();
 
-  }
+}
 
-  musicStarted = true;
+musicStarted = true;
 
-  document.removeEventListener(
-    "click",
-    firstInteractionMusic
-  );
+document.removeEventListener(
+"click",
+firstInteractionMusic
+);
 
-  document.removeEventListener(
-    "touchstart",
-    firstInteractionMusic
-  );
+document.removeEventListener(
+"touchstart",
+firstInteractionMusic
+);
 
-  document.removeEventListener(
-    "pointerdown",
-    firstInteractionMusic
-  );
+document.removeEventListener(
+"pointerdown",
+firstInteractionMusic
+);
 
 }
 
 document.addEventListener(
-  "click",
-  firstInteractionMusic,
-  {passive:true}
+"click",
+firstInteractionMusic,
+{passive:true}
 );
 
 document.addEventListener(
-  "touchstart",
-  firstInteractionMusic,
-  {passive:true}
+"touchstart",
+firstInteractionMusic,
+{passive:true}
 );
 
 document.addEventListener(
-  "pointerdown",
-  firstInteractionMusic,
-  {passive:true}
+"pointerdown",
+firstInteractionMusic,
+{passive:true}
 );
-
 
 /* VOICE NOTES */
 
 document
-  .querySelectorAll(".voice-note")
-  .forEach(function(audio){
+.querySelectorAll(".voice-note")
+.forEach(function(audio){
 
-    audio.addEventListener(
-      "play",
-      function(){
+audio.addEventListener(
+  "play",
+  function(){
 
-        document
-          .querySelectorAll(".voice-note")
-          .forEach(function(otherAudio){
+    document
+      .querySelectorAll(".voice-note")
+      .forEach(function(otherAudio){
 
-            if(
-              otherAudio !== audio &&
-              !otherAudio.paused
-            ){
+        if(
+          otherAudio !== audio &&
+          !otherAudio.paused
+        ){
 
-              otherAudio.pause();
-
-            }
-
-          });
-
-        pauseBackgroundForVoice();
-
-        const card =
-          audio.closest(
-            ".voice-card, .secret-voice"
-          );
-
-        if(card){
-
-          card.classList.add(
-            "audio-playing"
-          );
+          otherAudio.pause();
 
         }
 
-      }
-    );
+      });
 
-    audio.addEventListener(
-      "pause",
-      function(){
+    pauseBackgroundForVoice();
 
-        resumeBackgroundAfterVoice();
+    const card =
+      audio.closest(
+        ".voice-card, .secret-voice"
+      );
 
-        const card =
-          audio.closest(
-            ".voice-card, .secret-voice"
-          );
+    if(card){
 
-        if(card){
+      card.classList.add(
+        "audio-playing"
+      );
 
-          card.classList.remove(
-            "audio-playing"
-          );
-
-        }
-
-      }
-    );
-
-    audio.addEventListener(
-      "ended",
-      function(){
-
-        resumeBackgroundAfterVoice();
-
-        const card =
-          audio.closest(
-            ".voice-card, .secret-voice"
-          );
-
-        if(card){
-
-          card.classList.remove(
-            "audio-playing"
-          );
-
-        }
-
-      }
-    );
-
-  });
-
-
-/* VIDEOS */
-
-/*
-  IMPORTANT:
-  Video 7 (.birthday-video) is intentionally included here
-  so background music pauses while the birthday video plays.
-*/
-
-const allMemoryVideos =
-  document.querySelectorAll(
-    ".memory-video, .birthday-video"
-  );
-
-allMemoryVideos.forEach(
-  function(video){
-
-    video.addEventListener(
-      "play",
-      function(){
-
-        allMemoryVideos.forEach(
-          function(otherVideo){
-
-            if(
-              otherVideo !== video &&
-              !otherVideo.paused
-            ){
-
-              otherVideo.pause();
-
-            }
-
-          }
-        );
-
-        pauseBackgroundForVideo();
-
-      }
-    );
-
-    video.addEventListener(
-      "pause",
-      function(){
-
-        resumeBackgroundAfterVideo();
-
-      }
-    );
-
-    video.addEventListener(
-      "ended",
-      function(){
-
-        resumeBackgroundAfterVideo();
-
-      }
-    );
+    }
 
   }
 );
 
+audio.addEventListener(
+  "pause",
+  function(){
+
+    resumeBackgroundAfterVoice();
+
+    const card =
+      audio.closest(
+        ".voice-card, .secret-voice"
+      );
+
+    if(card){
+
+      card.classList.remove(
+        "audio-playing"
+      );
+
+    }
+
+  }
+);
+
+audio.addEventListener(
+  "ended",
+  function(){
+
+    resumeBackgroundAfterVoice();
+
+    const card =
+      audio.closest(
+        ".voice-card, .secret-voice"
+      );
+
+    if(card){
+
+      card.classList.remove(
+        "audio-playing"
+      );
+
+    }
+
+  }
+);
+
+});
+
+/* VIDEOS */
+
+const allMemoryVideos =
+document.querySelectorAll(
+".memory-video, .birthday-video"
+);
+
+allMemoryVideos.forEach(
+function(video){
+
+video.addEventListener(
+  "play",
+  function(){
+
+    allMemoryVideos.forEach(
+      function(otherVideo){
+
+        if(
+          otherVideo !== video &&
+          !otherVideo.paused
+        ){
+
+          otherVideo.pause();
+
+        }
+
+      }
+    );
+
+    pauseBackgroundForVideo();
+
+  }
+);
+
+video.addEventListener(
+  "pause",
+  function(){
+
+    resumeBackgroundAfterVideo();
+
+  }
+);
+
+video.addEventListener(
+  "ended",
+  function(){
+
+    resumeBackgroundAfterVideo();
+
+  }
+);
+
+}
+);
 
 /* SCROLL REVEALS */
 
 const revealElements =
 document.querySelectorAll(
-  ".reveal, .reveal-soft"
+".reveal, .reveal-soft"
 );
 
 const revealObserver =
 new IntersectionObserver(
-  function(entries,observer){
+function(entries,observer){
 
-    entries.forEach(
-      function(entry){
+entries.forEach(
+    function(entry){
 
-        if(entry.isIntersecting){
+      if(entry.isIntersecting){
 
-          entry.target.classList.add(
-            "visible"
-          );
+        entry.target.classList.add(
+          "visible"
+        );
 
-          observer.unobserve(
-            entry.target
-          );
-
-        }
+        observer.unobserve(
+          entry.target
+        );
 
       }
-    );
 
-  },
-  {
-    threshold:0.12,
-    rootMargin:"0px 0px -60px 0px"
-  }
+    }
+  );
+
+},
+{
+  threshold:0.12,
+  rootMargin:"0px 0px -60px 0px"
+}
+
 );
 
 revealElements.forEach(
-  function(element,index){
+function(element,index){
 
-    element.style.transitionDelay =
-      Math.min(
-        index * 0.055,
-        0.45
-      ) + "s";
+element.style.transitionDelay =
+  Math.min(
+    index * 0.055,
+    0.45
+  ) + "s";
 
-    revealObserver.observe(
-      element
-    );
-
-  }
+revealObserver.observe(
+  element
 );
 
+}
+);
 
 /* SECRET PAGE */
 
 const secretButton =
 document.getElementById(
-  "secretButton"
+"secretButton"
 );
 
 const secretGate =
 document.getElementById(
-  "secret-gate"
+"secret-gate"
 );
 
 const secretPage =
 document.getElementById(
-  "secret-page"
+"secret-page"
 );
 
 function unlockSecret(){
 
-  document
-    .querySelectorAll(
-      ".memory-video, .birthday-video"
-    )
-    .forEach(function(video){
+document
+.querySelectorAll(
+".memory-video, .birthday-video"
+)
+.forEach(function(video){
 
-      if(!video.paused){
+if(!video.paused){
 
-        video.pause();
+    video.pause();
 
-      }
+  }
 
-    });
+});
 
-  secretGate.style.transition =
-    "opacity 1s ease, transform 1s ease, filter 1s ease";
+secretGate.style.transition =
+"opacity 1s ease, transform 1s ease, filter 1s ease";
 
-  secretGate.style.opacity = "0";
+secretGate.style.opacity = "0";
 
-  secretGate.style.transform =
-    "scale(.97)";
+secretGate.style.transform =
+"scale(.97)";
 
-  secretGate.style.filter =
-    "blur(8px)";
+secretGate.style.filter =
+"blur(8px)";
+
+setTimeout(
+function(){
+
+secretGate.style.display =
+    "none";
+
+  secretPage.style.display =
+    "flex";
+
+  window.scrollTo({
+    top:0,
+    behavior:"auto"
+  });
 
   setTimeout(
     function(){
 
-      secretGate.style.display =
-        "none";
+      const secretElements =
+        secretPage.querySelectorAll(
+          ".reveal-soft"
+        );
 
-      secretPage.style.display =
-        "flex";
+      secretElements.forEach(
+        function(element,index){
 
-      window.scrollTo({
-        top:0,
-        behavior:"auto"
-      });
+          setTimeout(
+            function(){
 
-      setTimeout(
-        function(){
-
-          const secretElements =
-            secretPage.querySelectorAll(
-              ".reveal-soft"
-            );
-
-          secretElements.forEach(
-            function(element,index){
-
-              setTimeout(
-                function(){
-
-                  element.classList.add(
-                    "visible"
-                  );
-
-                },
-                index * 120
+              element.classList.add(
+                "visible"
               );
 
-            }
+            },
+            index * 120
           );
 
-        },
-        100
+        }
       );
 
     },
-    900
+    100
   );
+
+},
+900
+
+);
 
 }
 
 secretButton.addEventListener(
-  "click",
-  unlockSecret
+"click",
+unlockSecret
 );
-
 
 /* INITIAL MUSIC */
 
 window.addEventListener(
-  "load",
-  function(){
+"load",
+function(){
 
-    updateMusicButton();
+updateMusicButton();
 
-    startBackgroundMusic();
+startBackgroundMusic();
 
-  }
+}
 );
 
 </script>
