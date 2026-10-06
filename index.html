@@ -783,32 +783,41 @@ p{
 </audio>
 
 <button
-  id="musicToggle"
-  class="music-status"
-  type="button"
-  aria-label="Pause background music">
-  ♪
+id="musicToggle"
+class="music-status"
+type="button"
+aria-label="Pause background music">
+♪
 </button>
 
 <!-- OPENING -->
 
 <section id="opening">
+
   <div class="container opening-content">
+
     <span class="opening-heart">🫀</span>
-    <h1 class="opening-title">Sahiba My World 🫀🌍</h1>
+
+    <h1 class="opening-title">
+      Sahiba My World 🫀🌍
+    </h1>
+
     <div class="opening-subtitle">
       A little world made only for you
     </div>
+
   </div>
 
   <div class="scroll-hint">
     Scroll slowly ↓
   </div>
+
 </section>
 
 <!-- BEFORE YOU -->
 
 <section id="before">
+
   <div class="container reveal">
 
     <div class="eyebrow">
@@ -825,6 +834,7 @@ p{
     </p>
 
   </div>
+
 </section>
 
 <!-- THEN YOU -->
@@ -891,6 +901,7 @@ p{
     </div>
 
   </div>
+
 </section>
 
 <!-- THINGS I LOVE -->
@@ -975,6 +986,7 @@ p{
     </div>
 
   </div>
+
 </section>
 
 <!-- VOICE NOTE 01 -->
@@ -1010,6 +1022,7 @@ p{
     </div>
 
   </div>
+
 </section>
 
 <!-- VOICE NOTE 02 -->
@@ -1023,35 +1036,36 @@ p{
     </div>
 
     <h2 class="section-title">
-      Tumhare liye kuch kehna tha…
+      Ye bhi sunna…
     </h2>
 
     <div class="voice-card reveal-soft">
 
       <h3>
-        Just Listen. ❤️
+        Kaash Aaj…
       </h3>
 
       <p>
-        Isko thora araam se sunna…
+        Jo baat dil mein thi… woh tum tak pohanchani thi.
       </p>
 
       <audio class="voice-note" controls>
         <source
-          src="audio/video_261005_062000.mp3"
+          src="audio/video_261005_061117.mp3"
           type="audio/mpeg">
       </audio>
 
     </div>
 
   </div>
+
 </section>
 
 <!-- BIRTHDAY -->
 
 <section id="birthday">
 
-  <div class="container birthday-content">
+  <div class="birthday-content">
 
     <div class="birthday-date">
       09 OCTOBER
@@ -1059,31 +1073,11 @@ p{
 
     <div class="birthday-divider"></div>
 
-    <h2 class="birthday-wish">
+    <div class="birthday-wish">
       Happy Birthday, Sahiba. ❤️
-    </h2>
+    </div>
 
     <div class="birthday-message">
-
-      <p>
-        Woh din jab meri duniya thori si aur khoobsurat ho gayi. 🫀🌍
-      </p>
-
-      <p>
-        Aaj tumhara birthday hai, lekin sach kahun toh mere liye
-        ye sirf tumhari birthday date nahi hai.
-      </p>
-
-      <p>
-        Ye woh din hai jis din meri zindagi mein woh insaan aayi,
-        jo dheere dheere meri duniya ka sabse khoobsurat hissa ban gayi.
-      </p>
-
-      <p>
-        Do saal ho gaye hain humare saath…
-        aur in do saalon mein tum meri aadat bhi bani,
-        meri khushi bhi, meri comfort bhi aur meri sabse pyari feeling bhi.
-      </p>
 
       <p>
         Kaash aaj main tumhare paas hota…
@@ -1290,7 +1284,7 @@ p{
 
     </div>
 
-    <!-- SECRET VIDEOS -->
+    <!-- SEVEN SECRET VIDEOS -->
 
     <div class="memory-title reveal-soft">
       Little Moments
@@ -1445,17 +1439,16 @@ p{
           preload="metadata">
 
           <source
-  src="https://www.dropbox.com/scl/fi/7jr6hgot4lh65ys43sc5y/lv_0_20261006010357.mp4?rlkey=r0hh1t3si5iikvubwh05oh7yk&st=wyxvh04g&raw=1"
-  type="video/mp4">
+            src="Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4"
+            type="video/mp4">
 
           Your browser does not support video playback.
 
         </video>
 
         <a
-          href="https://www.dropbox.com/scl/fi/7jr6hgot4lh65ys43sc5y/lv_0_20261006010357.mp4?rlkey=r0hh1t3si5iikvubwh05oh7yk&st=wyxvh04g&dl=1"
-          target="_blank"
-          rel="noopener"
+          href="Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4"
+          download
           style="display:inline-flex;align-items:center;justify-content:center;margin:18px 10px 0;padding:12px 20px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#fff;text-decoration:none;font-family:Arial,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;">
 
           Download Birthday Video
@@ -1534,14 +1527,14 @@ p{
 <script>
 
 /* ==========================================
-   BACKGROUND MUSIC
-   ========================================== */
+BACKGROUND MUSIC
+========================================== */
 
 const backgroundMusic =
-  document.getElementById("backgroundMusic");
+document.getElementById("backgroundMusic");
 
 const musicToggle =
-  document.getElementById("musicToggle");
+document.getElementById("musicToggle");
 
 let musicStarted = false;
 let musicWasPlayingBeforeVoice = false;
@@ -1853,9 +1846,15 @@ document
 
 /* VIDEOS */
 
+/*
+  IMPORTANT:
+  Video 7 (.birthday-video) is intentionally included here
+  so background music pauses while the birthday video plays.
+*/
+
 const allMemoryVideos =
   document.querySelectorAll(
-    ".memory-video"
+    ".memory-video, .birthday-video"
   );
 
 allMemoryVideos.forEach(
@@ -1910,38 +1909,38 @@ allMemoryVideos.forEach(
 /* SCROLL REVEALS */
 
 const revealElements =
-  document.querySelectorAll(
-    ".reveal, .reveal-soft"
-  );
+document.querySelectorAll(
+  ".reveal, .reveal-soft"
+);
 
 const revealObserver =
-  new IntersectionObserver(
-    function(entries,observer){
+new IntersectionObserver(
+  function(entries,observer){
 
-      entries.forEach(
-        function(entry){
+    entries.forEach(
+      function(entry){
 
-          if(entry.isIntersecting){
+        if(entry.isIntersecting){
 
-            entry.target.classList.add(
-              "visible"
-            );
+          entry.target.classList.add(
+            "visible"
+          );
 
-            observer.unobserve(
-              entry.target
-            );
-
-          }
+          observer.unobserve(
+            entry.target
+          );
 
         }
-      );
 
-    },
-    {
-      threshold:0.12,
-      rootMargin:"0px 0px -60px 0px"
-    }
-  );
+      }
+    );
+
+  },
+  {
+    threshold:0.12,
+    rootMargin:"0px 0px -60px 0px"
+  }
+);
 
 revealElements.forEach(
   function(element,index){
@@ -1963,25 +1962,25 @@ revealElements.forEach(
 /* SECRET PAGE */
 
 const secretButton =
-  document.getElementById(
-    "secretButton"
-  );
+document.getElementById(
+  "secretButton"
+);
 
 const secretGate =
-  document.getElementById(
-    "secret-gate"
-  );
+document.getElementById(
+  "secret-gate"
+);
 
 const secretPage =
-  document.getElementById(
-    "secret-page"
-  );
+document.getElementById(
+  "secret-page"
+);
 
 function unlockSecret(){
 
   document
     .querySelectorAll(
-      ".memory-video"
+      ".memory-video, .birthday-video"
     )
     .forEach(function(video){
 
