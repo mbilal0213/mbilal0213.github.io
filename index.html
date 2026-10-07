@@ -129,11 +129,115 @@ p{color:#d3cbcc;line-height:1.9;font-size:16px}
 @media(max-width:430px){.photo-grid{grid-template-columns:1fr}.photo-card:nth-child(1){grid-row:auto}.photo-card:nth-child(1) img{aspect-ratio:4/5}.secret-photo-grid{grid-template-columns:1fr}.intro-name{font-size:68px}.v3-chapter{display:none}}
 @keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.11)}24%{transform:scale(1)}36%{transform:scale(1.07)}48%{transform:scale(1)}}
 @keyframes orbit{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.35}}@keyframes gold{50%{filter:brightness(1.15);text-shadow:0 2px 0 #b98e32,0 0 65px rgba(231,189,98,.4)}}@keyframes flame{to{transform:scale(1.08) rotate(2deg);filter:brightness(1.15)}}
+
+/* ULTRA RELIABLE INTRO: works without JavaScript */
+#v3StartToggle{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.v3-intro{
+ position:fixed;inset:0;z-index:999999;
+ display:flex;align-items:center;justify-content:center;
+ background:radial-gradient(circle at 50% 42%,rgba(255,255,255,.08),transparent 34%),#07070a;
+ color:#fff;overflow:hidden;
+ transition:opacity .9s ease,visibility .9s ease;
+}
+#v3StartToggle:checked ~ .v3-intro{opacity:0;visibility:hidden;pointer-events:none}
+.v3-intro-inner{width:min(92vw,760px);text-align:center;padding:30px}
+.v3-intro-kicker{font-family:Arial,sans-serif;font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#8f8b88;margin-bottom:25px}
+.v3-intro-heart{font-size:72px;line-height:1;margin-bottom:22px;animation:v3HeartPulse 2s ease-in-out infinite}
+.v3-intro-title{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(45px,8vw,82px);letter-spacing:-2px;margin-bottom:15px}
+.v3-intro-sub{color:#aaa5a1;font-family:Arial,sans-serif;font-size:13px;letter-spacing:2px;margin-bottom:38px}
+.v3-enter-label{
+ display:inline-flex;align-items:center;justify-content:center;
+ min-width:230px;min-height:54px;padding:0 30px;
+ border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.055);
+ color:#fff;font-family:Arial,sans-serif;font-size:11px;letter-spacing:3px;
+ text-transform:uppercase;cursor:pointer;user-select:none;
+ transition:transform .3s ease,background .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.v3-enter-label:hover{transform:translateY(-3px);background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.55);box-shadow:0 18px 45px rgba(255,255,255,.08)}
+.v3-enter-label:active{transform:translateY(0) scale(.98)}
+@keyframes v3HeartPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@media(max-width:650px){.v3-intro-title{font-size:44px}.v3-intro-heart{font-size:58px}.v3-enter-label{width:min(86vw,300px)}}
+
+
+/* =========================================================
+   TAP TO REVEAL — ONE CARD AT A TIME
+   ========================================================= */
+.tap-reveal-card{
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+  transition:transform .45s ease,border-color .45s ease,background .45s ease,box-shadow .45s ease;
+}
+.tap-reveal-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,255,255,.18);
+}
+.tap-reveal-card .tap-label{
+  margin-top:18px;
+  font-family:Arial,sans-serif;
+  font-size:9px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:#777;
+  transition:opacity .3s ease;
+}
+.tap-reveal-card .hidden-line{
+  max-height:0;
+  opacity:0;
+  transform:translateY(-8px);
+  overflow:hidden;
+  margin-top:0;
+  color:#f0ece8;
+  font-size:14px;
+  line-height:1.8;
+  transition:max-height .7s ease,opacity .6s ease,transform .7s ease,margin-top .7s ease;
+}
+.tap-reveal-card.revealed{
+  border-color:rgba(255,255,255,.24);
+  background:rgba(255,255,255,.045);
+  box-shadow:0 18px 55px rgba(0,0,0,.22);
+}
+.tap-reveal-card.revealed .hidden-line{
+  max-height:180px;
+  opacity:1;
+  transform:translateY(0);
+  margin-top:16px;
+}
+.tap-reveal-card.revealed .tap-label{
+  opacity:.45;
+}
+.tap-reveal-card .reveal-check{
+  display:inline-block;
+  margin-left:6px;
+  opacity:0;
+  transform:scale(.5);
+  transition:opacity .4s ease,transform .4s ease;
+}
+.tap-reveal-card.revealed .reveal-check{
+  opacity:1;
+  transform:scale(1);
+}
+
 </style>
 
 </head>
 
 <body>
+
+<!-- CSS-ONLY INTRO: ENTER DOES NOT DEPEND ON JAVASCRIPT -->
+<input type="checkbox" id="v3StartToggle">
+<div class="v3-intro">
+  <div class="v3-intro-inner">
+    <div class="v3-intro-kicker">A WORLD MADE FOR ONE PERSON</div>
+    <div class="v3-intro-heart">🫀</div>
+    <div class="v3-intro-title">Sahiba</div>
+    <div class="v3-intro-sub">Your little birthday story is about to begin.</div>
+    <label for="v3StartToggle" class="v3-enter-label">ENTER MY WORLD →</label>
+  </div>
+</div>
+
 <div class="v3-noise"></div>
 <div class="v3-progress"><span id="v3ProgressBar"></span></div>
 
@@ -296,73 +400,49 @@ p{color:#d3cbcc;line-height:1.9;font-size:16px}
 
     <div class="love-grid">
 
-      <div class="love-card reveal-soft">
-        <div class="love-number">01</div>
+  <div class="love-card tap-reveal-card reveal-soft" data-reveal-order="1" tabindex="0" role="button" aria-expanded="false">
+    <div class="love-number">01</div>
+    <h3>Tumhari Smile</h3>
+    <div class="tap-label">Tap to reveal <span class="reveal-check">✓</span></div>
+    <p class="hidden-line">Tumhari smile mein pata nahi kya baat hai… jis se mera mood automatically better ho jata hai. ❤️</p>
+  </div>
 
-        <h3>Tumhari Smile</h3>
+  <div class="love-card tap-reveal-card reveal-soft" data-reveal-order="2" tabindex="0" role="button" aria-expanded="false">
+    <div class="love-number">02</div>
+    <h3>Tumhari Care</h3>
+    <div class="tap-label">Tap to reveal <span class="reveal-check">✓</span></div>
+    <p class="hidden-line">Tum jis tarah choti choti cheezon ka khayal rakhti ho… woh mere liye bohat special hai. ❤️</p>
+  </div>
 
-        <p>
-          Tumhari smile mein pata nahi kya baat hai,
-          Jis se mera mood automatically better ho jata hai.
-        </p>
-      </div>
+  <div class="love-card tap-reveal-card reveal-soft" data-reveal-order="3" tabindex="0" role="button" aria-expanded="false">
+    <div class="love-number">03</div>
+    <h3>Tumhari Voice</h3>
+    <div class="tap-label">Tap to reveal <span class="reveal-check">✓</span></div>
+    <p class="hidden-line">Tumhari awaaz mein ek ajeeb sa sukoon hai… jo tumhare words se zyada feel hota hai. ❤️</p>
+  </div>
 
-      <div class="love-card reveal-soft">
-        <div class="love-number">02</div>
+  <div class="love-card tap-reveal-card reveal-soft" data-reveal-order="4" tabindex="0" role="button" aria-expanded="false">
+    <div class="love-number">04</div>
+    <h3>Tumhara Saath</h3>
+    <div class="tap-label">Tap to reveal <span class="reveal-check">✓</span></div>
+    <p class="hidden-line">Faasla chahe jitna bhi ho, tumhara hona phir bhi mere liye bohat qareeb hai. ❤️</p>
+  </div>
 
-        <h3>Tumhari Care</h3>
+  <div class="love-card tap-reveal-card reveal-soft" data-reveal-order="5" tabindex="0" role="button" aria-expanded="false">
+    <div class="love-number">05</div>
+    <h3>Tumhari Masoomiyat</h3>
+    <div class="tap-label">Tap to reveal <span class="reveal-check">✓</span></div>
+    <p class="hidden-line">Tumhari woh simple si masoomiyat jo tumhein mere liye aur bhi special banati hai. ❤️</p>
+  </div>
 
-        <p>
-          Tum jis tarah choti choti cheezon ka khayal rakhti ho,
-          woh mere liye bohat special hai.
-        </p>
-      </div>
+  <div class="love-card tap-reveal-card reveal-soft" data-reveal-order="6" tabindex="0" role="button" aria-expanded="false">
+    <div class="love-number">06</div>
+    <h3>Bas Tum</h3>
+    <div class="tap-label">Tap to reveal <span class="reveal-check">✓</span></div>
+    <p class="hidden-line">Aur sab se zyada… mujhe tumhara sirf tum hona pasand hai. ❤️</p>
+  </div>
 
-      <div class="love-card reveal-soft">
-        <div class="love-number">03</div>
-
-        <h3>Tumhari Voice</h3>
-
-        <p>
-          Tumhari awaaz mein ek ajeeb sa sukoon hai,
-          jo Tumhare words se zyada feel hota hai.
-        </p>
-      </div>
-
-      <div class="love-card reveal-soft">
-        <div class="love-number">04</div>
-
-        <h3>Tumhara Saath</h3>
-
-        <p>
-          Faasla chahe jitna bhi ho,
-          tumhara hona phir bhi mere liye bohat qareeb hai.
-        </p>
-      </div>
-
-      <div class="love-card reveal-soft">
-        <div class="love-number">05</div>
-
-        <h3>Tumhari Masoomiyat</h3>
-
-        <p>
-          Tumhari woh simple si masoomiyat
-          jo tumhein mere liye aur bhi special banati hai.
-        </p>
-      </div>
-
-      <div class="love-card reveal-soft">
-        <div class="love-number">06</div>
-
-        <h3>Bas Tum</h3>
-
-        <p>
-          Aur sab se zyada…
-          mujhe tumhara sirf tum hona pasand hai.
-        </p>
-      </div>
-
-    </div>
+</div>
 
   </div>
 </section>
@@ -1055,6 +1135,32 @@ secretButton.addEventListener("click",()=>{
    secret.querySelectorAll(".reveal-soft").forEach((el,i)=>setTimeout(()=>el.classList.add("visible"),i*90));
  },850);
 });
+
+
+/* =========================================================
+   TAP TO REVEAL INTERACTION
+   Each card reveals its own hidden line directly underneath.
+   Cards can be opened independently.
+   ========================================================= */
+document.querySelectorAll(".tap-reveal-card").forEach(function(card){
+
+  function revealCard(){
+    const isOpen = card.classList.contains("revealed");
+    card.classList.toggle("revealed", !isOpen);
+    card.setAttribute("aria-expanded", String(!isOpen));
+  }
+
+  card.addEventListener("click", revealCard);
+
+  card.addEventListener("keydown", function(event){
+    if(event.key === "Enter" || event.key === " "){
+      event.preventDefault();
+      revealCard();
+    }
+  });
+
+});
+
 </script>
 
 
