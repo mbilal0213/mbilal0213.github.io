@@ -144,7 +144,10 @@ p{color:#d3cbcc;line-height:1.9;font-size:16px}
   <div class="intro-name">Sahiba</div>
   <div class="intro-line"></div>
   <div class="intro-sub">Your little birthday story is about to begin.</div>
-  <button class="intro-enter" id="introEnter">ENTER MY WORLD <span>→</span></button>
+  <button class="intro-enter" id="introEnter"
+      onclick="document.getElementById('v3Intro').classList.add('hide');try{document.getElementById('backgroundMusic').play()}catch(e){}">
+      ENTER MY WORLD <span>→</span>
+    </button>
 </div>
 
 <button class="v3-music" id="musicToggle" type="button" aria-label="Pause background music">♫</button>
@@ -969,12 +972,17 @@ const progress=document.getElementById("v3ProgressBar");
 const chapter=document.getElementById("chapterLabel");
 
 function updateMusic(){
+  if(!musicBtn || !music) return;
   musicBtn.textContent=music.paused?"♪":"♫";
   musicBtn.setAttribute("aria-label",music.paused?"Play background music":"Pause background music");
 }
 function startMusic(){music.play().catch(()=>{});updateMusic()}
-enter.addEventListener("click",()=>{intro.classList.add("hide");startMusic()});
-musicBtn.addEventListener("click",()=>{music.paused?music.play().catch(()=>{}):music.pause();updateMusic()});
+if(enter && intro){
+  enter.addEventListener("click",()=>{intro.classList.add("hide");startMusic()});
+}
+if(musicBtn && music){
+  musicBtn.addEventListener("click",()=>{music.paused?music.play().catch(()=>{}):music.pause();updateMusic()});
+}
 window.addEventListener("load",()=>{updateMusic();setTimeout(()=>startMusic(),500)});
 
 document.addEventListener("click",()=>{if(!intro.classList.contains("hide")) return; if(music.paused) startMusic()},{once:true});
