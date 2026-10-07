@@ -241,19 +241,6 @@ p{color:#d3cbcc;line-height:1.9;font-size:16px}
 <div class="v3-noise"></div>
 <div class="v3-progress"><span id="v3ProgressBar"></span></div>
 
-<div class="v3-intro" id="v3Intro">
-  <div class="intro-orbit"></div>
-  <div class="intro-heart">🫀</div>
-  <div class="intro-kicker">A WORLD MADE FOR ONE PERSON</div>
-  <div class="intro-name">Sahiba</div>
-  <div class="intro-line"></div>
-  <div class="intro-sub">Your little birthday story is about to begin.</div>
-  <button class="intro-enter" id="introEnter"
-      onclick="document.getElementById('v3Intro').classList.add('hide');try{document.getElementById('backgroundMusic').play()}catch(e){}">
-      ENTER MY WORLD <span>→</span>
-    </button>
-</div>
-
 <button class="v3-music" id="musicToggle" type="button" aria-label="Pause background music">♫</button>
 <div class="v3-chapter" id="chapterLabel">CHAPTER 01</div>
 
@@ -1046,8 +1033,8 @@ p{color:#d3cbcc;line-height:1.9;font-size:16px}
 <script>
 const music=document.getElementById("backgroundMusic");
 const musicBtn=document.getElementById("musicToggle");
-const intro=document.getElementById("v3Intro");
-const enter=document.getElementById("introEnter");
+const startToggle=document.getElementById("v3StartToggle");
+const intro=document.querySelector(".v3-intro");
 const progress=document.getElementById("v3ProgressBar");
 const chapter=document.getElementById("chapterLabel");
 
@@ -1057,6 +1044,12 @@ function updateMusic(){
   musicBtn.setAttribute("aria-label",music.paused?"Play background music":"Pause background music");
 }
 function startMusic(){music.play().catch(()=>{});updateMusic()}
+
+if(startToggle){
+  startToggle.addEventListener("change",()=>{
+    if(startToggle.checked) startMusic();
+  });
+}
 if(enter && intro){
   enter.addEventListener("click",()=>{intro.classList.add("hide");startMusic()});
 }
@@ -1065,7 +1058,10 @@ if(musicBtn && music){
 }
 window.addEventListener("load",()=>{updateMusic();setTimeout(()=>startMusic(),500)});
 
-document.addEventListener("click",()=>{if(!intro.classList.contains("hide")) return; if(music.paused) startMusic()},{once:true});
+document.addEventListener("click",()=>{
+  if(startToggle && !startToggle.checked) return;
+  if(music && music.paused) startMusic();
+},{once:true});
 
 const allMedia=[...document.querySelectorAll("audio.voice-note, video.memory-video, video.birthday-video")];
 allMedia.forEach(media=>{
