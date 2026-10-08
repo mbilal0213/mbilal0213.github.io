@@ -395,6 +395,77 @@ p{
   animation:signatureReveal 1.3s ease forwards 6.6s;
   text-align:center;
 }
+.birthday-photo-gallery{
+  width:100%;
+  max-width:680px;
+  margin:58px auto 0;
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+}
+.birthday-photo-frame{
+  position:relative;
+  padding:10px;
+  border:1px solid rgba(246,211,106,.30);
+  background:linear-gradient(145deg,rgba(246,211,106,.10),rgba(255,255,255,.025) 42%,rgba(246,211,106,.06));
+  box-shadow:0 25px 70px rgba(0,0,0,.45),0 0 35px rgba(246,211,106,.07),inset 0 0 0 1px rgba(255,255,255,.035);
+  overflow:hidden;
+  opacity:0;
+  transform:translateY(28px) scale(.985);
+  animation:birthdayPhotoReveal 1.1s cubic-bezier(.2,.8,.2,1) forwards;
+}
+.birthday-photo-frame:nth-child(1){animation-delay:7.0s}
+.birthday-photo-frame:nth-child(2){animation-delay:7.25s}
+.birthday-photo-frame:nth-child(3){animation-delay:7.5s}
+.birthday-photo-frame::before{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:1px solid rgba(246,211,106,.12);
+  pointer-events:none;
+  z-index:2;
+}
+.birthday-photo-frame::after{
+  content:"";
+  position:absolute;
+  width:85px;
+  height:85px;
+  top:-42px;
+  right:-42px;
+  border-radius:50%;
+  background:rgba(246,211,106,.13);
+  filter:blur(18px);
+  pointer-events:none;
+}
+.birthday-photo-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:820px;
+  aspect-ratio:2/3;
+  object-fit:contain;
+  background:#0b0b0e;
+  border:1px solid rgba(255,255,255,.07);
+}
+.birthday-photo-number{
+  padding:13px 8px 4px;
+  font-family:Arial,sans-serif;
+  font-size:9px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#8d8884;
+}
+.birthday-photo-frame:nth-child(1) .birthday-photo-number::after{content:"01"}
+.birthday-photo-frame:nth-child(2) .birthday-photo-number::after{content:"02"}
+.birthday-photo-frame:nth-child(3) .birthday-photo-number::after{content:"03"}
+@keyframes birthdayPhotoReveal{
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@media(max-width:650px){
+  .birthday-photo-gallery{margin-top:48px;gap:25px}
+  .birthday-photo-frame{padding:7px}
+  .birthday-photo-frame img{aspect-ratio:2/3}
+}
 
 
 /* MAKE A WISH */
@@ -849,7 +920,7 @@ p{
 
 <body>
 
-<audio id="backgroundMusic" loop preload="auto">
+<audio id="backgroundMusic" loop preload="none">
   <source src="audio/seven_hundred_days.mp3" type="audio/mpeg">
 </audio>
 
@@ -934,37 +1005,37 @@ aria-label="Pause background music">
       <div class="photo-card reveal-soft">
         <img
           src="photos/836047644_1517493520215720_838773169894214034_n.webp"
-          alt="Sahiba memory">
+          alt="Sahiba memory" loading="lazy" decoding="async">
       </div>
 
       <div class="photo-card reveal-soft">
         <img
           src="photos/833863929_1454018590029370_3026298843227763391_n~2.jpg"
-          alt="Sahiba memory">
+          alt="Sahiba memory" loading="lazy" decoding="async">
       </div>
 
       <div class="photo-card reveal-soft">
         <img
           src="photos/834420758_1314896243981877_3670248286428189349_n~2.jpg"
-          alt="Sahiba memory">
+          alt="Sahiba memory" loading="lazy" decoding="async">
       </div>
 
       <div class="photo-card reveal-soft">
         <img
           src="photos/834013551_1971217433550530_1508402001411190807_n~2.jpg"
-          alt="Sahiba memory">
+          alt="Sahiba memory" loading="lazy" decoding="async">
       </div>
 
       <div class="photo-card reveal-soft">
         <img
           src="photos/833937182_1625359475760597_68192428769134760_n~2.jpg"
-          alt="Sahiba memory">
+          alt="Sahiba memory" loading="lazy" decoding="async">
       </div>
 
       <div class="photo-card reveal-soft">
         <img
           src="photos/836459703_1142084788243559_302515098545442851_n~2.jpg"
-          alt="Sahiba memory">
+          alt="Sahiba memory" loading="lazy" decoding="async">
       </div>
 
     </div>
@@ -1212,6 +1283,39 @@ aria-label="Pause background music">
     <div class="birthday-signature">
       Happy Birthday, meri Jaan. ❤️
     </div>
+    <div class="birthday-photo-gallery" aria-label="Birthday memories">
+
+      <div class="birthday-photo-frame">
+        <img
+          src="photos/file_00000000604482088edb5184c24a86d2.png"
+          alt="Birthday memory 01"
+          loading="lazy"
+          decoding="async"
+          width="800"
+          height="1200">
+        <div class="birthday-photo-number"></div>
+      </div>
+
+      <div class="birthday-photo-frame">
+        <img
+          src="photos/file_0000000024688208889e329bb3144b23.png"
+          alt="Birthday memory 02"
+          loading="lazy"
+          decoding="async">
+        <div class="birthday-photo-number"></div>
+      </div>
+
+      <div class="birthday-photo-frame">
+        <img
+          src="photos/file_0000000058788208a0b692d105e18b04.png"
+          alt="Birthday memory 03"
+          loading="lazy"
+          decoding="async">
+        <div class="birthday-photo-number"></div>
+      </div>
+
+    </div>
+
     <!-- MAKE A WISH -->
     <div class="make-wish-section">
       <div class="make-wish-eyebrow">A Little Wish For You</div>
@@ -1324,7 +1428,7 @@ aria-label="Pause background music">
 
         <img
           src="photos/IMG-20261005-WA0102.jpg"
-          alt="Our memory 01">
+          alt="Our memory 01" loading="lazy" decoding="async">
 
         <div class="secret-photo-caption">
           Ek tasveer… aur bohat saari feelings. ❤️
@@ -1338,7 +1442,7 @@ aria-label="Pause background music">
 
         <img
           src="photos/IMG-20261005-WA0016.jpg"
-          alt="Our memory 02">
+          alt="Our memory 02" loading="lazy" decoding="async">
 
         <div class="secret-photo-caption">
           Kuch moments waqt se zyada khoobsurat hote hain.
@@ -1352,7 +1456,7 @@ aria-label="Pause background music">
 
         <img
           src="photos/834123999_1754891875728422_970364681246853540_n~2.jpg"
-          alt="Our memory 03">
+          alt="Our memory 03" loading="lazy" decoding="async">
 
         <div class="secret-photo-caption">
           Ye pal mere liye hamesha special rahega.
@@ -1366,7 +1470,7 @@ aria-label="Pause background music">
 
         <img
           src="photos/838745560_1327800492624531_3560593124743434029_n.webp"
-          alt="Our memory 04">
+          alt="Our memory 04" loading="lazy" decoding="async">
 
         <div class="secret-photo-caption">
           Tumhari ek smile… aur mera poora din.
@@ -1380,7 +1484,7 @@ aria-label="Pause background music">
 
         <img
           src="photos/834420775_1790502455303832_9050202259590965079_n.webp"
-          alt="Our memory 05">
+          alt="Our memory 05" loading="lazy" decoding="async">
 
         <div class="secret-photo-caption">
           Humari kahani ke kuch aur khoobsurat pal.
@@ -1394,7 +1498,7 @@ aria-label="Pause background music">
 
         <img
           src="photos/833964935_1094658093318842_8566956730759267504_n.webp"
-          alt="Our memory 06">
+          alt="Our memory 06" loading="lazy" decoding="async">
 
         <div class="secret-photo-caption">
           Aur ye memory… sirf meri favourite person ke naam.
@@ -1420,7 +1524,7 @@ aria-label="Pause background music">
           class="memory-video"
           controls
           playsinline
-          preload="metadata">
+          preload="none">
 
           <source
             src="video/IMG_0085.MP4"
@@ -1442,7 +1546,7 @@ aria-label="Pause background music">
           class="memory-video"
           controls
           playsinline
-          preload="metadata">
+          preload="none">
 
           <source
             src="video/VID-20261005-WA0103.mp4"
@@ -1464,7 +1568,7 @@ aria-label="Pause background music">
           class="memory-video"
           controls
           playsinline
-          preload="metadata">
+          preload="none">
 
           <source
             src="video/VID-20261005-WA0104.mp4"
@@ -1486,7 +1590,7 @@ aria-label="Pause background music">
           class="memory-video"
           controls
           playsinline
-          preload="metadata">
+          preload="none">
 
           <source
             src="video/VID-20261005-WA0012.mp4"
@@ -1508,7 +1612,7 @@ aria-label="Pause background music">
           class="memory-video"
           controls
           playsinline
-          preload="metadata">
+          preload="none">
 
           <source
             src="video/VID-20261005-WA0027.mp4"
@@ -1530,7 +1634,7 @@ aria-label="Pause background music">
           class="memory-video"
           controls
           playsinline
-          preload="metadata">
+          preload="none">
 
           <source
             src="video/VID-20261005-WA0035.mp4"
@@ -1556,7 +1660,7 @@ aria-label="Pause background music">
           class="birthday-video"
           controls
           playsinline
-          preload="metadata">
+          preload="none">
 
           <source
             src="video/Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4"
