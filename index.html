@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -14,9 +13,7 @@
   box-sizing:border-box;
 }
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   background:#08080b;
@@ -50,9 +47,7 @@ section{
   margin-bottom:18px;
 }
 
-h1,h2,h3{
-  font-weight:400;
-}
+h1,h2,h3{font-weight:400}
 
 p{
   color:#d6d1cd;
@@ -64,10 +59,7 @@ p{
   opacity:0;
   transform:translateY(38px);
   filter:blur(8px);
-  transition:
-    opacity 1.2s ease,
-    transform 1.2s ease,
-    filter 1.2s ease;
+  transition:opacity 1.2s ease,transform 1.2s ease,filter 1.2s ease;
 }
 
 .reveal.visible{
@@ -80,10 +72,7 @@ p{
   opacity:0;
   transform:translateY(20px) scale(.98);
   filter:blur(5px);
-  transition:
-    opacity 1.3s ease,
-    transform 1.3s ease,
-    filter 1.3s ease;
+  transition:opacity 1.3s ease,transform 1.3s ease,filter 1.3s ease;
 }
 
 .reveal-soft.visible{
@@ -96,15 +85,11 @@ p{
 
 #opening{
   min-height:100vh;
-  background:
-    radial-gradient(circle at center,rgba(255,255,255,.055),transparent 42%),
-    #08080b;
+  background:radial-gradient(circle at center,rgba(255,255,255,.055),transparent 42%),#08080b;
   overflow:hidden;
 }
 
-.opening-content{
-  animation:openingFade 2.4s ease forwards;
-}
+.opening-content{animation:openingFade 2.4s ease forwards}
 
 .opening-heart{
   font-size:62px;
@@ -144,8 +129,7 @@ p{
 /* BEFORE YOU */
 
 #before{
-  background:
-    radial-gradient(circle at 50% 40%,rgba(255,255,255,.035),transparent 45%);
+  background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.035),transparent 45%);
 }
 
 .before-title{
@@ -161,9 +145,7 @@ p{
 
 /* THEN YOU */
 
-#then{
-  background:#0a0a0d;
-}
+#then{background:#0a0a0d}
 
 .section-title{
   font-size:clamp(38px,8vw,66px);
@@ -196,15 +178,12 @@ p{
   transition:transform 1.2s ease;
 }
 
-.photo-card:hover img{
-  transform:scale(1.035);
-}
+.photo-card:hover img{transform:scale(1.035)}
 
 /* THINGS I LOVE */
 
 #love{
-  background:
-    radial-gradient(circle at center,rgba(255,255,255,.025),transparent 50%);
+  background:radial-gradient(circle at center,rgba(255,255,255,.025),transparent 50%);
 }
 
 .love-grid{
@@ -234,32 +213,19 @@ p{
   margin-bottom:15px;
 }
 
-.love-card h3{
-  font-size:22px;
-  margin-bottom:12px;
-}
-
-.love-card p{
-  font-size:14px;
-  line-height:1.75;
-}
+.love-card h3{font-size:22px;margin-bottom:12px}
+.love-card p{font-size:14px;line-height:1.75}
 
 /* VOICE NOTES */
 
-.voice-section{
-  background:#09090c;
-}
+.voice-section{background:#09090c}
 
 .voice-card{
   max-width:650px;
   margin:35px auto 0;
   padding:35px 25px;
   border:1px solid rgba(255,255,255,.09);
-  background:linear-gradient(
-    145deg,
-    rgba(255,255,255,.035),
-    rgba(255,255,255,.012)
-  );
+  background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
   box-shadow:0 25px 70px rgba(0,0,0,.28);
   transition:transform .5s ease,border-color .5s ease;
 }
@@ -269,33 +235,14 @@ p{
   box-shadow:0 25px 80px rgba(255,255,255,.05);
 }
 
-.voice-card h3{
-  font-size:25px;
-  margin-bottom:10px;
-}
-
-.voice-card p{
-  font-size:14px;
-  color:#aaa;
-  margin-bottom:25px;
-}
-
-.voice-note{
-  width:100%;
-  height:42px;
-}
+.voice-card h3{font-size:25px;margin-bottom:10px}
+.voice-card p{font-size:14px;color:#aaa;margin-bottom:25px}
+.voice-note{width:100%;height:42px}
 
 /* BIRTHDAY */
 
 #birthday{
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(255,255,255,.08),
-      rgba(255,255,255,.015) 32%,
-      transparent 65%
-    ),
-    #07070a;
+  background:radial-gradient(circle at center,rgba(255,255,255,.08),rgba(255,255,255,.015) 32%,transparent 65%),#07070a;
   overflow:hidden;
 }
 
@@ -313,22 +260,10 @@ p{
   letter-spacing:8px;
   line-height:1;
   margin-bottom:30px;
-
-  /* 24K GOLD / MUSTARD GOLD */
   color:#f6d36a;
-
   text-align:center;
-
-  text-shadow:
-    0 1px 0 #fff0a8,
-    0 2px 0 #d9ad3f,
-    0 5px 15px rgba(218,170,45,.38),
-    0 0 28px rgba(246,211,106,.28),
-    0 0 60px rgba(218,170,45,.16);
-
-  animation:
-    birthdayDateReveal 2s cubic-bezier(.2,.8,.2,1) forwards,
-    birthdayGoldGlow 4s ease-in-out infinite 2s;
+  text-shadow:0 1px 0 #fff0a8,0 2px 0 #d9ad3f,0 5px 15px rgba(218,170,45,.38),0 0 28px rgba(246,211,106,.28),0 0 60px rgba(218,170,45,.16);
+  animation:birthdayDateReveal 2s cubic-bezier(.2,.8,.2,1) forwards,birthdayGoldGlow 4s ease-in-out infinite 2s;
 }
 
 .birthday-divider{
@@ -344,34 +279,18 @@ p{
   font-family:Arial,sans-serif;
   font-size:clamp(28px,7vw,52px);
   font-weight:800;
-  color:#ffffff;
+  color:#fff;
   letter-spacing:.5px;
   margin-bottom:30px;
   opacity:0;
   transform:translateY(20px) scale(.94);
   animation:birthdayWishReveal 1.4s cubic-bezier(.2,.8,.2,1) forwards 1.5s;
-  text-shadow:
-    0 1px 0 #ffffff,
-    0 2px 0 rgba(255,255,255,.8),
-    0 4px 0 rgba(190,190,190,.5),
-    0 7px 15px rgba(255,255,255,.22),
-    0 0 30px rgba(255,255,255,.16);
+  text-shadow:0 1px 0 #fff,0 2px 0 rgba(255,255,255,.8),0 4px 0 rgba(190,190,190,.5),0 7px 15px rgba(255,255,255,.22),0 0 30px rgba(255,255,255,.16);
   text-align:center;
 }
 
-.birthday-message{
-  max-width:700px;
-  margin:auto;
-  text-align:center;
-}
-
-.birthday-message p{
-  margin-bottom:21px;
-  opacity:0;
-  transform:translateY(18px);
-  text-align:center;
-}
-
+.birthday-message{max-width:700px;margin:auto;text-align:center}
+.birthday-message p{margin-bottom:21px;opacity:0;transform:translateY(18px);text-align:center}
 .birthday-message p:nth-child(1){animation:messageReveal 1s ease forwards 2.5s}
 .birthday-message p:nth-child(2){animation:messageReveal 1s ease forwards 2.8s}
 .birthday-message p:nth-child(3){animation:messageReveal 1s ease forwards 3.1s}
@@ -397,32 +316,307 @@ p{
   text-align:center;
 }
 
+/* BIRTHDAY PHOTOS — FIXED: SHOW FULL IMAGE, KEEP ORIGINAL RATIO */
+
+.birthday-photos{
+  width:100%;
+  max-width:680px;
+  margin:70px auto 0;
+  display:flex;
+  flex-direction:column;
+  gap:42px;
+}
+
+.birthday-photo-card{
+  position:relative;
+  padding:12px;
+  background:linear-gradient(145deg,rgba(246,211,106,.18),rgba(255,255,255,.035) 35%,rgba(246,211,106,.08) 70%,rgba(255,255,255,.025));
+  border:1px solid rgba(246,211,106,.32);
+  box-shadow:0 22px 60px rgba(0,0,0,.42),0 0 28px rgba(246,211,106,.07);
+  overflow:hidden;
+}
+
+.birthday-photo-card::before{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:1px solid rgba(246,211,106,.13);
+  pointer-events:none;
+}
+
+.birthday-photo-card::after{
+  content:"✦";
+  position:absolute;
+  top:12px;
+  right:17px;
+  color:#f6d36a;
+  font-family:Georgia,serif;
+  font-size:14px;
+  opacity:.8;
+  text-shadow:0 0 10px rgba(246,211,106,.5);
+}
+
+/* IMPORTANT FIX: no fixed height/max-height, no cropping */
+.birthday-photo-card img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:contain;
+  position:relative;
+  z-index:1;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 10px 30px rgba(0,0,0,.28);
+}
+
+.birthday-photo-card:nth-child(2){transform:translateX(0)}
+.birthday-photo-card:nth-child(3){transform:translateX(0)}
+
+/* MAKE A WISH */
+
+.make-wish-section{
+  margin:72px auto 0;
+  padding:52px 24px 20px;
+  max-width:760px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.08);
+  position:relative;
+}
+
+.make-wish-eyebrow{
+  font-family:Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:10px;
+  color:#777;
+  margin-bottom:16px;
+}
+
+.make-wish-title{font-size:clamp(30px,6vw,46px);font-weight:400;margin-bottom:12px}
+
+.make-wish-subtitle{
+  max-width:560px;
+  margin:0 auto;
+  color:#aaa4a0;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.wish-cake{
+  width:230px;
+  height:220px;
+  margin:62px auto 24px;
+  position:relative;
+  cursor:pointer;
+  outline:none;
+  transition:transform .45s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.wish-cake:hover{transform:translateY(-5px)}
+.wish-cake:focus-visible{outline:1px solid rgba(246,211,106,.55);outline-offset:10px}
+
+.cake-plate{
+  position:absolute;
+  left:50%;
+  bottom:4px;
+  transform:translateX(-50%);
+  width:220px;
+  height:18px;
+  border-radius:50%;
+  background:linear-gradient(to bottom,#f2f0ed,#aaa6a2);
+  box-shadow:0 8px 25px rgba(0,0,0,.5);
+}
+
+.cake-bottom{
+  position:absolute;
+  left:50%;
+  bottom:21px;
+  transform:translateX(-50%);
+  width:190px;
+  height:54px;
+  border-radius:8px 8px 15px 15px;
+  background:linear-gradient(to bottom,#7c2634,#4a111c);
+  box-shadow:0 12px 28px rgba(0,0,0,.38);
+}
+
+.cake-middle{
+  position:absolute;
+  left:50%;
+  bottom:69px;
+  transform:translateX(-50%);
+  width:178px;
+  height:42px;
+  border-radius:8px;
+  background:linear-gradient(to bottom,#f3d5d2,#c99aa0);
+  box-shadow:inset 0 -6px 0 rgba(100,20,35,.12);
+}
+
+.cake-top{
+  position:absolute;
+  left:50%;
+  bottom:101px;
+  transform:translateX(-50%);
+  width:184px;
+  height:44px;
+  border-radius:50%;
+  background:linear-gradient(to bottom,#f9ece6,#e1bbb5);
+  box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.cake-cream{
+  position:absolute;
+  left:8px;
+  right:8px;
+  bottom:-8px;
+  height:20px;
+  border-radius:0 0 18px 18px;
+  background:#f8eee8;
+}
+
+.cake-dot{position:absolute;width:7px;height:7px;border-radius:50%;background:#f6d36a;box-shadow:0 0 8px rgba(246,211,106,.35)}
+.dot-1{left:25px;top:16px}
+.dot-2{left:61px;top:11px}
+.dot-3{left:91px;top:18px}
+.dot-4{right:55px;top:12px}
+.dot-5{right:24px;top:18px}
+
+.wish-candle{
+  position:absolute;
+  z-index:5;
+  left:50%;
+  bottom:139px;
+  transform:translateX(-50%);
+  width:23px;
+  height:65px;
+}
+
+.candle-body{
+  position:absolute;
+  inset:0;
+  border-radius:5px 5px 3px 3px;
+  background:linear-gradient(90deg,#f5d36d,#fff0a4,#d8a93e);
+  box-shadow:0 0 12px rgba(246,211,106,.15),inset 2px 0 3px rgba(255,255,255,.45);
+}
+
+.candle-wick{
+  position:absolute;
+  z-index:2;
+  left:50%;
+  top:-7px;
+  width:3px;
+  height:10px;
+  transform:translateX(-50%);
+  border-radius:3px;
+  background:#2a2020;
+}
+
+.wish-flame{
+  position:absolute;
+  z-index:7;
+  left:50%;
+  bottom:196px;
+  width:30px;
+  height:48px;
+  transform:translateX(-50%);
+  transform-origin:50% 100%;
+  border-radius:55% 45% 55% 45%;
+  background:radial-gradient(circle at 50% 68%,#fff 0 15%,#ffe88a 28%,#f2b83f 56%,rgba(241,119,39,.9) 72%,transparent 74%);
+  filter:drop-shadow(0 0 13px rgba(255,194,67,.65));
+  animation:flameFlicker 1.1s infinite ease-in-out;
+  transition:opacity .7s ease,transform .7s ease;
+}
+
+.flame-core{
+  position:absolute;
+  left:50%;
+  bottom:5px;
+  width:10px;
+  height:20px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:#fff;
+  filter:blur(1px);
+}
+
+.wish-cake.wish-complete .wish-flame{
+  opacity:0;
+  transform:translateX(-50%) translateY(-22px) scale(.25);
+  animation:none;
+}
+
+.wish-hint{
+  font-family:Arial,sans-serif;
+  letter-spacing:3px;
+  font-size:10px;
+  color:#888;
+  animation:wishHintPulse 2s infinite ease-in-out;
+  transition:opacity .5s ease,transform .5s ease;
+}
+
+.wish-cake.wish-complete + .wish-hint{opacity:0;transform:translateY(-8px);pointer-events:none}
+
+.wish-message{
+  max-width:600px;
+  margin:0 auto;
+  padding:0 12px;
+  opacity:0;
+  transform:translateY(25px) scale(.96);
+  filter:blur(7px);
+  max-height:0;
+  overflow:hidden;
+  transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.8,.2,1),filter 1.1s ease,max-height 1.1s ease;
+}
+
+.wish-message.visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  filter:blur(0);
+  max-height:350px;
+  margin-top:22px;
+}
+
+.wish-heart{font-size:34px;margin-bottom:12px;animation:wishHeartPulse 1.8s infinite ease-in-out}
+
+.wish-message-title{
+  font-family:Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:13px;
+  color:#f6d36a;
+  margin-bottom:16px;
+}
+
+.wish-message p{font-size:15px;line-height:1.9;color:#cfc9c5;margin-bottom:12px}
+.wish-message .wish-final-line{color:#fff;font-size:16px}
+.wish-sparkles{margin-top:18px;color:#f6d36a;letter-spacing:5px;animation:sparkleFloat 2s infinite ease-in-out}
+
+@keyframes flameFlicker{
+  0%,100%{transform:translateX(-50%) rotate(-3deg) scale(1)}
+  25%{transform:translateX(-50%) rotate(3deg) scale(1.04,.96)}
+  50%{transform:translateX(-50%) rotate(-2deg) scale(.95,1.06)}
+  75%{transform:translateX(-50%) rotate(4deg) scale(1.05,.98)}
+}
+
+@keyframes wishHintPulse{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes wishHeartPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes sparkleFloat{0%,100%{opacity:.45;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
+
+@media(max-width:650px){
+  .make-wish-section{margin-top:60px;padding-left:10px;padding-right:10px}
+  .wish-cake{transform:scale(.92);margin-top:52px;margin-bottom:18px}
+  .wish-cake:hover{transform:scale(.92) translateY(-4px)}
+  .wish-message p{font-size:14px}
+}
+
 /* SECRET GATE */
 
-#secret-gate{
-  min-height:75vh;
-  background:#08080b;
-}
-
-.lock{
-  font-size:45px;
-  margin-bottom:22px;
-}
-
-.secret-gate:hover .lock{
-  transform:scale(1.08);
-}
-
-.secret-title{
-  font-size:clamp(36px,8vw,60px);
-  margin-bottom:18px;
-}
-
-.secret-copy{
-  max-width:580px;
-  margin:0 auto 30px;
-  color:#aaa;
-}
+#secret-gate{min-height:75vh;background:#08080b}
+.lock{font-size:45px;margin-bottom:22px}
+.secret-gate:hover .lock{transform:scale(1.08)}
+.secret-title{font-size:clamp(36px,8vw,60px);margin-bottom:18px}
+.secret-copy{max-width:580px;margin:0 auto 30px;color:#aaa}
 
 .secret-button{
   display:inline-flex;
@@ -438,11 +632,7 @@ p{
   letter-spacing:2px;
   text-transform:uppercase;
   cursor:pointer;
-  transition:
-    background .4s ease,
-    border-color .4s ease,
-    transform .4s ease,
-    box-shadow .4s ease;
+  transition:background .4s ease,border-color .4s ease,transform .4s ease,box-shadow .4s ease;
 }
 
 .secret-button:hover{
@@ -457,31 +647,13 @@ p{
 #secret-page{
   display:none;
   min-height:100vh;
-  background:
-    radial-gradient(circle at center,rgba(255,255,255,.04),transparent 50%),
-    #07070a;
+  background:radial-gradient(circle at center,rgba(255,255,255,.04),transparent 50%),#07070a;
 }
 
-.secret-page-inner{
-  width:100%;
-  max-width:850px;
-  margin:auto;
-  text-align:center;
-}
-
-.secret-opening{
-  margin-bottom:75px;
-}
-
-.secret-opening h2{
-  font-size:clamp(40px,9vw,70px);
-  margin-bottom:20px;
-}
-
-.secret-opening p{
-  max-width:620px;
-  margin:auto;
-}
+.secret-page-inner{width:100%;max-width:850px;margin:auto;text-align:center}
+.secret-opening{margin-bottom:75px}
+.secret-opening h2{font-size:clamp(40px,9vw,70px);margin-bottom:20px}
+.secret-opening p{max-width:620px;margin:auto}
 
 .memory-title{
   font-family:Arial,sans-serif;
@@ -517,24 +689,12 @@ p{
   transition:transform 1.2s ease;
 }
 
-.secret-photo-card:hover img{
-  transform:scale(1.025);
-}
-
-.secret-photo-caption{
-  padding:18px 8px 12px;
-  color:#c9c4c0;
-  font-size:14px;
-  line-height:1.7;
-}
+.secret-photo-card:hover img{transform:scale(1.025)}
+.secret-photo-caption{padding:18px 8px 12px;color:#c9c4c0;font-size:14px;line-height:1.7}
 
 /* SECRET VIDEOS */
 
-.secret-video-list{
-  display:grid;
-  gap:30px;
-  margin-bottom:85px;
-}
+.secret-video-list{display:grid;gap:30px;margin-bottom:85px}
 
 .secret-video-card{
   border:1px solid rgba(255,255,255,.08);
@@ -543,36 +703,16 @@ p{
   overflow:hidden;
 }
 
-.memory-video{
-  display:block;
-  width:100%;
-  aspect-ratio:9/16;
-  object-fit:cover;
-  background:#0a0a0d;
-}
-
-.birthday-video{
-  display:block;
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
-  background:#0a0a0d;
-}
-
-.video-caption{
-  padding:18px 10px 12px;
-  color:#c9c4c0;
-  font-size:14px;
-}
+.memory-video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#0a0a0d}
+.birthday-video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0a0a0d}
+.video-caption{padding:18px 10px 12px;color:#c9c4c0;font-size:14px}
 
 .video-placeholder{
   aspect-ratio:16/9;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:
-    radial-gradient(circle at center,rgba(255,255,255,.05),transparent 50%),
-    #0a0a0d;
+  background:radial-gradient(circle at center,rgba(255,255,255,.05),transparent 50%),#0a0a0d;
   color:#666;
   font-family:Arial,sans-serif;
   font-size:10px;
@@ -590,42 +730,15 @@ p{
   background:rgba(255,255,255,.025);
 }
 
-.secret-voice h3{
-  font-size:28px;
-  margin-bottom:12px;
-}
-
-.secret-voice p{
-  font-size:14px;
-  margin-bottom:25px;
-  color:#aaa;
-}
+.secret-voice h3{font-size:28px;margin-bottom:12px}
+.secret-voice p{font-size:14px;margin-bottom:25px;color:#aaa}
 
 /* ENDING */
 
-.secret-ending{
-  padding-bottom:110px;
-}
-
-.secret-ending p{
-  margin-bottom:12px;
-  font-size:17px;
-  color:#bbb;
-}
-
-.secret-ending .final-line{
-  margin-top:32px;
-  color:#fff;
-  font-size:24px;
-}
-
-.secret-ending .cute-world{
-  margin-top:14px;
-  color:#ddd;
-  font-family:Arial,sans-serif;
-  letter-spacing:2px;
-  font-size:13px;
-}
+.secret-ending{padding-bottom:110px}
+.secret-ending p{margin-bottom:12px;font-size:17px;color:#bbb}
+.secret-ending .final-line{margin-top:32px;color:#fff;font-size:24px}
+.secret-ending .cute-world{margin-top:14px;color:#ddd;font-family:Arial,sans-serif;letter-spacing:2px;font-size:13px}
 
 /* MUSIC */
 
@@ -649,10 +762,7 @@ p{
   cursor:pointer;
 }
 
-.music-status:hover{
-  opacity:1;
-  transform:scale(1.05);
-}
+.music-status:hover{opacity:1;transform:scale(1.05)}
 
 /* ANIMATIONS */
 
@@ -669,24 +779,11 @@ p{
   48%{transform:scale(1)}
 }
 
-@keyframes hintPulse{
-  0%,100%{opacity:.35}
-  50%{opacity:.8}
-}
+@keyframes hintPulse{0%,100%{opacity:.35}50%{opacity:.8}}
 
 @keyframes birthdayDateReveal{
-  from{
-    opacity:0;
-    transform:scale(1.22);
-    filter:blur(15px);
-    letter-spacing:25px;
-  }
-  to{
-    opacity:1;
-    transform:scale(1);
-    filter:blur(0);
-    letter-spacing:8px;
-  }
+  from{opacity:0;transform:scale(1.22);filter:blur(15px);letter-spacing:25px}
+  to{opacity:1;transform:scale(1);filter:blur(0);letter-spacing:8px}
 }
 
 /* 24K GOLD SHINE / GLOW */
@@ -694,114 +791,43 @@ p{
 @keyframes birthdayGoldGlow{
   0%,100%{
     color:#e8bd4f;
-    text-shadow:
-      0 1px 0 #fff0a8,
-      0 2px 0 #c99b2e,
-      0 5px 15px rgba(218,170,45,.30),
-      0 0 25px rgba(246,211,106,.20),
-      0 0 50px rgba(218,170,45,.10);
+    text-shadow:0 1px 0 #fff0a8,0 2px 0 #c99b2e,0 5px 15px rgba(218,170,45,.30),0 0 25px rgba(246,211,106,.20),0 0 50px rgba(218,170,45,.10);
     filter:brightness(.96);
   }
-
   50%{
     color:#ffe58a;
-    text-shadow:
-      0 1px 0 #fff7c7,
-      0 2px 0 #e1b94e,
-      0 5px 18px rgba(238,194,72,.48),
-      0 0 35px rgba(246,211,106,.42),
-      0 0 75px rgba(218,170,45,.22);
+    text-shadow:0 1px 0 #fff7c7,0 2px 0 #e1b94e,0 5px 18px rgba(238,194,72,.48),0 0 35px rgba(246,211,106,.42),0 0 75px rgba(218,170,45,.22);
     filter:brightness(1.12);
   }
 }
 
-@keyframes dividerReveal{
-  from{opacity:0;width:0}
-  to{opacity:1;width:70px}
-}
+@keyframes dividerReveal{from{opacity:0;width:0}to{opacity:1;width:70px}}
 
 @keyframes birthdayWishReveal{
-  from{
-    opacity:0;
-    transform:translateY(22px) scale(.92);
-    filter:blur(8px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0) scale(1);
-    filter:blur(0);
-  }
+  from{opacity:0;transform:translateY(22px) scale(.92);filter:blur(8px)}
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
 }
 
-@keyframes messageReveal{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-@keyframes signatureReveal{
-  from{opacity:0;transform:translateY(15px)}
-  to{opacity:1;transform:translateY(0)}
-}
+@keyframes messageReveal{to{opacity:1;transform:translateY(0)}}
+@keyframes signatureReveal{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
 
 @media(max-width:650px){
-
-  section{
-    padding:70px 18px;
-  }
-
-  .opening-title{
-    font-size:43px;
-  }
-
-  .opening-heart{
-    font-size:52px;
-  }
-
-  p{
-    font-size:15px;
-  }
-
-  .photo-grid,
-  .love-grid,
-  .secret-photo-grid{
-    grid-template-columns:1fr;
-  }
-
-  .love-card{
-    padding:25px 20px;
-  }
-
-  .birthday-date{
-    font-size:57px;
-    letter-spacing:5px;
-  }
-
-  .birthday-wish{
-    font-size:31px;
-  }
-
-  .birthday-message p{
-    font-size:15px;
-    line-height:1.85;
-    text-align:center;
-  }
-
-  .secret-title{
-    font-size:42px;
-  }
-
-  .memory-video{
-    aspect-ratio:9/16;
-  }
-
-  .birthday-video{
-    aspect-ratio:16/9;
-  }
+  section{padding:70px 18px}
+  .opening-title{font-size:43px}
+  .opening-heart{font-size:52px}
+  p{font-size:15px}
+  .photo-grid,.love-grid,.secret-photo-grid{grid-template-columns:1fr}
+  .love-card{padding:25px 20px}
+  .birthday-date{font-size:57px;letter-spacing:5px}
+  .birthday-wish{font-size:31px}
+  .birthday-message p{font-size:15px;line-height:1.85;text-align:center}
+  .birthday-photos{margin-top:55px;gap:30px}
+  .birthday-photo-card{padding:9px}
+  .secret-title{font-size:42px}
+  .memory-video{aspect-ratio:9/16}
+  .birthday-video{aspect-ratio:16/9}
 }
 </style>
-
 </head>
 
 <body>
@@ -810,1290 +836,571 @@ p{
   <source src="audio/seven_hundred_days.mp3" type="audio/mpeg">
 </audio>
 
-<button
-id="musicToggle"
-class="music-status"
-type="button"
-aria-label="Pause background music">
-♪
-</button>
+<button id="musicToggle" class="music-status" type="button" aria-label="Pause background music">♪</button>
 
 <!-- OPENING -->
 
 <section id="opening">
   <div class="container opening-content">
-
-<span class="opening-heart">🫀</span>
-
-<h1 class="opening-title">
-  Sahiba My World 🫀🌍
-</h1>
-
-<div class="opening-subtitle">
-  A little world made only for you
-</div>
-
+    <span class="opening-heart">🫀</span>
+    <h1 class="opening-title">Sahiba My World 🫀🌍</h1>
+    <div class="opening-subtitle">A little world made only for you</div>
   </div>
-
-  <div class="scroll-hint">
-    Scroll slowly ↓
-  </div>
+  <div class="scroll-hint">Scroll slowly ↓</div>
 </section>
 
 <!-- BEFORE YOU -->
 
 <section id="before">
-
   <div class="container reveal">
-
-<div class="eyebrow">
-  Before You…
-</div>
-
-<h2 class="before-title">
-  I never knew my world could feel like this.
-</h2>
-
-<p class="before-text">
-  Kabhi kabhi zindagi bilkul normal chal rahi hoti hai…
-  phir achanak koi insaan aata hai aur sab achanak se badal jata hai.
-</p>
-
+    <div class="eyebrow">Before You…</div>
+    <h2 class="before-title">I never knew my world could feel like this.</h2>
+    <p class="before-text">
+      Kabhi kabhi zindagi bilkul normal chal rahi hoti hai…
+      phir achanak koi insaan aata hai aur sab achanak se badal jata hai.
+    </p>
   </div>
-
 </section>
 
 <!-- THEN YOU -->
 
 <section id="then">
-
   <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">The Girl Who Became My World</div>
+      <h2 class="section-title">Then You Happened.</h2>
+      <p class="section-copy">
+        Tumhari har tasveer mujhe ek hi baat yaad dilati hai…
+        meri duniya kitni khoobsurat hai, kyunki usmein tum ho.
+      </p>
+    </div>
 
-<div class="reveal">
-
-  <div class="eyebrow">
-    The Girl Who Became My World
-  </div>
-
-  <h2 class="section-title">
-    Then You Happened.
-  </h2>
-
-  <p class="section-copy">
-    Tumhari har tasveer mujhe ek hi baat yaad dilati hai…
-    meri duniya kitni khoobsurat hai, kyunki usmein tum ho.
-  </p>
-
-</div>
-
-<div class="photo-grid">
-
-  <div class="photo-card reveal-soft">
-    <img
-      src="photos/836047644_1517493520215720_838773169894214034_n.webp"
-      alt="Sahiba memory">
-  </div>
-
-  <div class="photo-card reveal-soft">
-    <img
-      src="photos/833863929_1454018590029370_3026298843227763391_n~2.jpg"
-      alt="Sahiba memory">
-  </div>
-
-  <div class="photo-card reveal-soft">
-    <img
-      src="photos/834420758_1314896243981877_3670248286428189349_n~2.jpg"
-      alt="Sahiba memory">
-  </div>
-
-  <div class="photo-card reveal-soft">
-    <img
-      src="photos/834013551_1971217433550530_1508402001411190807_n~2.jpg"
-      alt="Sahiba memory">
-  </div>
-
-  <div class="photo-card reveal-soft">
-    <img
-      src="photos/833937182_1625359475760597_68192428769134760_n~2.jpg"
-      alt="Sahiba memory">
-  </div>
-
-  <div class="photo-card reveal-soft">
-    <img
-      src="photos/836459703_1142084788243559_302515098545442851_n~2.jpg"
-      alt="Sahiba memory">
-  </div>
-
-</div>
-
+    <div class="photo-grid">
+      <div class="photo-card reveal-soft"><img src="photos/836047644_1517493520215720_838773169894214034_n.webp" alt="Sahiba memory"></div>
+      <div class="photo-card reveal-soft"><img src="photos/833863929_1454018590029370_3026298843227763391_n~2.jpg" alt="Sahiba memory"></div>
+      <div class="photo-card reveal-soft"><img src="photos/834420758_1314896243981877_3670248286428189349_n~2.jpg" alt="Sahiba memory"></div>
+      <div class="photo-card reveal-soft"><img src="photos/834013551_1971217433550530_1508402001411190807_n~2.jpg" alt="Sahiba memory"></div>
+      <div class="photo-card reveal-soft"><img src="photos/833937182_1625359475760597_68192428769134760_n~2.jpg" alt="Sahiba memory"></div>
+      <div class="photo-card reveal-soft"><img src="photos/836459703_1142084788243559_302515098545442851_n~2.jpg" alt="Sahiba memory"></div>
+    </div>
   </div>
 </section>
 
 <!-- THINGS I LOVE -->
 
 <section id="love">
-
   <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Things I Love About You</div>
+      <h2 class="section-title">It’s the little things.</h2>
+      <p class="section-copy">Kuch cheezey explain nahi hotin… bas dil unhein mehsoos karta hai.</p>
+    </div>
 
-<div class="reveal">
-
-  <div class="eyebrow">
-    Things I Love About You
-  </div>
-
-  <h2 class="section-title">
-    It’s the little things.
-  </h2>
-
-  <p class="section-copy">
-    Kuch cheezey explain nahi hotin…
-    bas dil unhein mehsoos karta hai.
-  </p>
-
-</div>
-
-<div class="love-grid">
-
-  <div class="love-card reveal-soft">
-    <div class="love-number">01</div>
-
-    <h3>Tumhari Smile</h3>
-
-    <p>
-      Tumhari smile mein pata nahi kya baat hai,
-      Jis se mera mood automatically better ho jata hai.
-    </p>
-  </div>
-
-  <div class="love-card reveal-soft">
-    <div class="love-number">02</div>
-
-    <h3>Tumhari Care</h3>
-
-    <p>
-      Tum jis tarah choti choti cheezon ka khayal rakhti ho,
-      woh mere liye bohat special hai.
-    </p>
-  </div>
-
-  <div class="love-card reveal-soft">
-    <div class="love-number">03</div>
-
-    <h3>Tumhari Voice</h3>
-
-    <p>
-      Tumhari awaaz mein ek ajeeb sa sukoon hai,
-      jo Tumhare words se zyada feel hota hai.
-    </p>
-  </div>
-
-  <div class="love-card reveal-soft">
-    <div class="love-number">04</div>
-
-    <h3>Tumhara Saath</h3>
-
-    <p>
-      Faasla chahe jitna bhi ho,
-      tumhara hona phir bhi mere liye bohat qareeb hai.
-    </p>
-  </div>
-
-  <div class="love-card reveal-soft">
-    <div class="love-number">05</div>
-
-    <h3>Tumhari Masoomiyat</h3>
-
-    <p>
-      Tumhari woh simple si masoomiyat
-      jo tumhein mere liye aur bhi special banati hai.
-    </p>
-  </div>
-
-  <div class="love-card reveal-soft">
-    <div class="love-number">06</div>
-
-    <h3>Bas Tum</h3>
-
-    <p>
-      Aur sab se zyada…
-      mujhe tumhara sirf tum hona pasand hai.
-    </p>
-  </div>
-
-</div>
-
+    <div class="love-grid">
+      <div class="love-card reveal-soft"><div class="love-number">01</div><h3>Tumhari Smile</h3><p>Tumhari smile mein pata nahi kya baat hai, Jis se mera mood automatically better ho jata hai.</p></div>
+      <div class="love-card reveal-soft"><div class="love-number">02</div><h3>Tumhari Care</h3><p>Tum jis tarah choti choti cheezon ka khayal rakhti ho, woh mere liye bohat special hai.</p></div>
+      <div class="love-card reveal-soft"><div class="love-number">03</div><h3>Tumhari Voice</h3><p>Tumhari awaaz mein ek ajeeb sa sukoon hai, jo Tumhare words se zyada feel hota hai.</p></div>
+      <div class="love-card reveal-soft"><div class="love-number">04</div><h3>Tumhara Saath</h3><p>Faasla chahe jitna bhi ho, tumhara hona phir bhi mere liye bohat qareeb hai.</p></div>
+      <div class="love-card reveal-soft"><div class="love-number">05</div><h3>Tumhari Masoomiyat</h3><p>Tumhari woh simple si masoomiyat jo tumhein mere liye aur bhi special banati hai.</p></div>
+      <div class="love-card reveal-soft"><div class="love-number">06</div><h3>Bas Tum</h3><p>Aur sab se zyada… mujhe tumhara sirf tum hona pasand hai.</p></div>
+    </div>
   </div>
 </section>
 
 <!-- VOICE NOTE 01 -->
 
 <section class="voice-section">
-
   <div class="container reveal">
-
-<div class="eyebrow">
-  Voice Note 01
-</div>
-
-<h2 class="section-title">
-  Ye pehle sunna…
-</h2>
-
-<div class="voice-card reveal-soft">
-
-  <h3>
-    For You, Sahiba. 🫀
-  </h3>
-
-  <p>
-    Jo baat likh nahi saka… woh awaaz mein kehna tha.
-  </p>
-
-  <audio class="voice-note" controls>
-
-    <source
-      src="audio/video_261005_061117.mp3"
-      type="audio/mpeg">
-
-  </audio>
-
-</div>
-
+    <div class="eyebrow">Voice Note 01</div>
+    <h2 class="section-title">Ye pehle sunna…</h2>
+    <div class="voice-card reveal-soft">
+      <h3>For You, Sahiba. 🫀</h3>
+      <p>Jo baat likh nahi saka… woh awaaz mein kehna tha.</p>
+      <audio class="voice-note" controls><source src="audio/video_261005_061117.mp3" type="audio/mpeg"></audio>
+    </div>
   </div>
 </section>
 
 <!-- VOICE NOTE 02 -->
 
 <section class="voice-section">
-
   <div class="container reveal">
-
-<div class="eyebrow">
-  Voice Note 02
-</div>
-
-<h2 class="section-title">
-  Tumhare liye kuch kehna tha…
-</h2>
-
-<div class="voice-card reveal-soft">
-
-  <h3>
-    Just Listen. ❤️
-  </h3>
-
-  <p>
-    Isko thora araam se sunna…
-  </p>
-
-  <audio class="voice-note" controls>
-    <source
-      src="audio/video_261005_062000.mp3"
-      type="audio/mpeg">
-  </audio>
-
-</div>
-
+    <div class="eyebrow">Voice Note 02</div>
+    <h2 class="section-title">Tumhare liye kuch kehna tha…</h2>
+    <div class="voice-card reveal-soft">
+      <h3>Just Listen. ❤️</h3>
+      <p>Isko thora araam se sunna…</p>
+      <audio class="voice-note" controls><source src="audio/video_261005_062000.mp3" type="audio/mpeg"></audio>
+    </div>
   </div>
-
 </section>
 
 <!-- BIRTHDAY -->
 
 <section id="birthday">
-
   <div class="birthday-content">
+    <div class="eyebrow">Birthday</div>
+    <div class="birthday-date">09 OCTOBER</div>
+    <div class="birthday-divider"></div>
+    <div class="birthday-wish">Happy Birthday, Sahiba. ❤️</div>
 
-<div class="eyebrow">
-  Birthday
-</div>
+    <div class="birthday-message">
+      <p>Kaash aaj main tumhare paas hota… tumhare saamne baith kar tumhein birthday wish karta, tumhari smile dekhta aur tumhein khud kehta ke tum mere liye kitni special ho.</p>
+      <p>Lekin faasla hai… aur main tumhare paas nahi aa sakta.</p>
+      <p>Isliye maine socha, kyun na apni taraf se tumhare liye ek chhoti si duniya bana doon?</p>
+      <p>Ye website usi duniya ka ek chota sa hisa hai.</p>
+      <p>Aur agar kabhi tumhein lage ke tum mere liye kitni important ho… toh bas is page ko dobara khol lena.</p>
+      <p>Tum meri Sahiba ho.</p>
+      <p>Meri Jaan.<br>Meri Shehzadi.<br>Mera Dil.<br>Meri Dharkan.</p>
+      <p>Aur hamesha…</p>
+      <p>My Cute World. 🫀🌍</p>
+    </div>
 
-<div class="birthday-date">
-  09 OCTOBER
-</div>
+    <div class="birthday-signature">Happy Birthday, meri Jaan. ❤️</div>
 
-<div class="birthday-divider"></div>
+    <!-- BIRTHDAY PHOTOS -->
 
-<div class="birthday-wish">
-  Happy Birthday, Sahiba. ❤️
-</div>
+    <div class="birthday-photos">
+      <div class="birthday-photo-card reveal-soft">
+        <img src="photos/file_00000000604482088edb5184c24a86d2.png" alt="Sahiba birthday photo 01">
+      </div>
+      <div class="birthday-photo-card reveal-soft">
+        <img src="photos/file_0000000024688208889e329bb3144b23.png" alt="Sahiba birthday photo 02">
+      </div>
+      <div class="birthday-photo-card reveal-soft">
+        <img src="photos/file_0000000058788208a0b692d105e18b04.png" alt="Sahiba birthday photo 03">
+      </div>
+    </div>
 
-<div class="birthday-message">
+    <!-- MAKE A WISH -->
 
-  <p>
-    Kaash aaj main tumhare paas hota…
-    tumhare saamne baith kar tumhein birthday wish karta,
-    tumhari smile dekhta aur tumhein khud kehta
-    ke tum mere liye kitni special ho.
-  </p>
+    <div class="make-wish-section">
+      <div class="make-wish-eyebrow">A Little Wish For You</div>
+      <h3 class="make-wish-title">Make a Wish. 🕯️</h3>
+      <p class="make-wish-subtitle">Candle par tap karo… aur dil mein apni ek wish maango. ❤️</p>
 
-  <p>
-    Lekin faasla hai… aur main tumhare paas nahi aa sakta.
-  </p>
+      <div class="wish-cake" id="wishCake" role="button" tabindex="0" aria-label="Tap the candle to make a wish">
+        <div class="wish-flame" id="wishFlame"><span class="flame-core"></span></div>
+        <div class="wish-candle"><div class="candle-wick"></div><div class="candle-body"></div></div>
+        <div class="cake-top">
+          <div class="cake-cream"></div>
+          <span class="cake-dot dot-1"></span><span class="cake-dot dot-2"></span><span class="cake-dot dot-3"></span><span class="cake-dot dot-4"></span><span class="cake-dot dot-5"></span>
+        </div>
+        <div class="cake-middle"></div>
+        <div class="cake-bottom"></div>
+        <div class="cake-plate"></div>
+      </div>
 
-  <p>
-    Isliye maine socha, kyun na apni taraf se tumhare liye
-    ek chhoti si duniya bana doon?
-  </p>
+      <div class="wish-hint" id="wishHint">TAP THE CANDLE</div>
 
-  <p>
-    Ye website usi duniya ka ek chota sa hisa hai.
-  </p>
-
-  <p>
-    Aur agar kabhi tumhein lage ke tum mere liye kitni important ho…
-    toh bas is page ko dobara khol lena.
-  </p>
-
-  <p>
-    Tum meri Sahiba ho.
-  </p>
-
-  <p>
-    Meri Jaan.<br>
-    Meri Shehzadi.<br>
-    Mera Dil.<br>
-    Meri Dharkan.
-  </p>
-
-  <p>
-    Aur hamesha…
-  </p>
-
-  <p>
-    My Cute World. 🫀🌍
-  </p>
-
-</div>
-
-<div class="birthday-signature">
-  Happy Birthday, meri Jaan. ❤️
-</div>
-
+      <div class="wish-message" id="wishMessage">
+        <div class="wish-heart">❤️</div>
+        <div class="wish-message-title">Wish Made.</div>
+        <p>Jo bhi tumne dil se maanga hai… meri dua hai ke woh tumhari zindagi mein zaroor aaye.</p>
+        <p class="wish-final-line">Aur meri sab se khoobsurat wish… hamesha tumhari khushi hai. 🫀</p>
+        <div class="wish-sparkles">✦ &nbsp; ✧ &nbsp; ✦</div>
+      </div>
+    </div>
   </div>
-
 </section>
 
 <!-- SECRET GATE -->
 
 <section id="secret-gate">
-
   <div class="container reveal">
-
-<div class="lock">
-  🔒
-</div>
-
-<div class="eyebrow">
-  Something Private
-</div>
-
-<h2 class="secret-title">
-  Our Little World
-</h2>
-
-<p class="secret-copy">
-  Kuch pal duniya ke liye nahi hote…
-  kuch pal sirf hum dono ke liye hote hain.
-</p>
-
-<button
-  class="secret-button"
-  type="button"
-  id="secretButton">
-  Open Secret Page
-</button>
-
+    <div class="lock">🔒</div>
+    <div class="eyebrow">Something Private</div>
+    <h2 class="secret-title">Our Little World</h2>
+    <p class="secret-copy">Kuch pal duniya ke liye nahi hote… kuch pal sirf hum dono ke liye hote hain.</p>
+    <button class="secret-button" type="button" id="secretButton">Open Secret Page</button>
   </div>
 </section>
 
 <!-- SECRET PAGE -->
 
 <section id="secret-page">
-
   <div class="secret-page-inner">
-
-<div class="secret-opening reveal-soft">
-
-  <div class="eyebrow">
-    Our Little World 🫀
-  </div>
-
-  <h2>
-    Sirf Hum Dono Ke Liye.
-  </h2>
-
-  <p>
-    Kuch memories duniya ko dikhane ke liye nahi hoti…
-    kuch memories bas dil mein rakhne ke liye hoti hain.
-  </p>
-
-</div>
-
-<!-- SIX SECRET PHOTOS -->
-
-<div class="memory-title reveal-soft">
-  Our Memories
-</div>
-
-<div class="secret-photo-grid">
-
-  <!-- PHOTO 01 — FINAL UPDATED FILE -->
-
-  <div class="secret-photo-card reveal-soft">
-
-    <img
-      src="photos/IMG-20261005-WA0102.jpg"
-      alt="Our memory 01">
-
-    <div class="secret-photo-caption">
-      Ek tasveer… aur bohat saari feelings. ❤️
+    <div class="secret-opening reveal-soft">
+      <div class="eyebrow">Our Little World 🫀</div>
+      <h2>Sirf Hum Dono Ke Liye.</h2>
+      <p>Kuch memories duniya ko dikhane ke liye nahi hoti… kuch memories bas dil mein rakhne ke liye hoti hain.</p>
     </div>
 
-  </div>
+    <!-- SIX SECRET PHOTOS -->
 
-  <!-- PHOTO 02 — UNCHANGED -->
+    <div class="memory-title reveal-soft">Our Memories</div>
 
-  <div class="secret-photo-card reveal-soft">
-
-    <img
-      src="photos/IMG-20261005-WA0016.jpg"
-      alt="Our memory 02">
-
-    <div class="secret-photo-caption">
-      Kuch moments waqt se zyada khoobsurat hote hain.
+    <div class="secret-photo-grid">
+      <div class="secret-photo-card reveal-soft">
+        <img src="photos/IMG-20261005-WA0102.jpg" alt="Our memory 01">
+        <div class="secret-photo-caption">Ek tasveer… aur bohat saari feelings. ❤️</div>
+      </div>
+      <div class="secret-photo-card reveal-soft">
+        <img src="photos/IMG-20261005-WA0016.jpg" alt="Our memory 02">
+        <div class="secret-photo-caption">Kuch moments waqt se zyada khoobsurat hote hain.</div>
+      </div>
+      <div class="secret-photo-card reveal-soft">
+        <img src="photos/834123999_1754891875728422_970364681246853540_n~2.jpg" alt="Our memory 03">
+        <div class="secret-photo-caption">Ye pal mere liye hamesha special rahega.</div>
+      </div>
+      <div class="secret-photo-card reveal-soft">
+        <img src="photos/838745560_1327800492624531_3560593124743434029_n.webp" alt="Our memory 04">
+        <div class="secret-photo-caption">Tumhari ek smile… aur mera poora din.</div>
+      </div>
+      <div class="secret-photo-card reveal-soft">
+        <img src="photos/834420775_1790502455303832_9050202259590965079_n.webp" alt="Our memory 05">
+        <div class="secret-photo-caption">Humari kahani ke kuch aur khoobsurat pal.</div>
+      </div>
+      <div class="secret-photo-card reveal-soft">
+        <img src="photos/833964935_1094658093318842_8566956730759267504_n.webp" alt="Our memory 06">
+        <div class="secret-photo-caption">Aur ye memory… sirf meri favourite person ke naam.</div>
+      </div>
     </div>
 
-  </div>
+    <!-- SIX SECRET VIDEOS -->
 
-  <!-- PHOTO 03 — FINAL UPDATED FILE -->
+    <div class="memory-title reveal-soft">Little Moments</div>
 
-  <div class="secret-photo-card reveal-soft">
+    <div class="secret-video-list">
+      <div class="secret-video-card reveal-soft">
+        <video class="memory-video" controls playsinline preload="metadata"><source src="video/IMG_0085.MP4" type="video/mp4"></video>
+        <div class="video-caption">Kuch moments bas dobara jeene ke liye hote hain.</div>
+      </div>
 
-    <img
-      src="photos/834123999_1754891875728422_970364681246853540_n~2.jpg"
-      alt="Our memory 03">
+      <div class="secret-video-card reveal-soft">
+        <video class="memory-video" controls playsinline preload="metadata"><source src="video/VID-20261005-WA0103.mp4" type="video/mp4"></video>
+        <div class="video-caption">Tum… meri favourite memories ka sabse khoobsurat hissa ho.</div>
+      </div>
 
-    <div class="secret-photo-caption">
-      Ye pal mere liye hamesha special rahega.
+      <div class="secret-video-card reveal-soft">
+        <video class="memory-video" controls playsinline preload="metadata"><source src="video/VID-20261005-WA0104.mp4" type="video/mp4"></video>
+        <div class="video-caption">Ek aur moment jo main kabhi bhoolna nahi chahta.</div>
+      </div>
+
+      <div class="secret-video-card reveal-soft">
+        <video class="memory-video" controls playsinline preload="metadata"><source src="video/VID-20261005-WA0012.mp4" type="video/mp4"></video>
+        <div class="video-caption">Do saal… aur itni saari memories.</div>
+      </div>
+
+      <div class="secret-video-card reveal-soft">
+        <video class="memory-video" controls playsinline preload="metadata"><source src="video/VID-20261005-WA0027.mp4" type="video/mp4"></video>
+        <div class="video-caption">Distance ke bawajood, tum hamesha mere qareeb hoo.</div>
+      </div>
+
+      <div class="secret-video-card reveal-soft">
+        <video class="memory-video" controls playsinline preload="metadata"><source src="video/VID-20261005-WA0035.mp4" type="video/mp4"></video>
+        <div class="video-caption">Aur ye… humari kahani ka ek aur chota sa hisa.</div>
+      </div>
+
+      <!-- VIDEO 07 — BIRTHDAY AI VIDEO -->
+
+      <div class="secret-video-card birthday-video-card reveal-soft">
+        <div class="memory-title">Birthday Video</div>
+        <video class="birthday-video" controls playsinline preload="metadata">
+          <source src="video/Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <a href="video/Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4" download style="display:inline-flex;align-items:center;justify-content:center;margin:18px 10px 0;padding:12px 20px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#fff;text-decoration:none;font-family:Arial,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;">Download Birthday Video</a>
+        <div class="video-caption">Ye birthday… aur tumhare liye banayi hui ek choti si duniya. ❤️</div>
+      </div>
     </div>
 
-  </div>
+    <!-- SECRET VOICE NOTE 03 -->
 
-  <!-- PHOTO 04 — FINAL UPDATED FILE -->
-
-  <div class="secret-photo-card reveal-soft">
-
-    <img
-      src="photos/838745560_1327800492624531_3560593124743434029_n.webp"
-      alt="Our memory 04">
-
-    <div class="secret-photo-caption">
-      Tumhari ek smile… aur mera poora din.
+    <div class="secret-voice reveal-soft">
+      <div class="eyebrow">Secret Voice Note 03</div>
+      <h3>Bas ek baat aur…</h3>
+      <p>Ab ye sab dekhne ke baad, meri awaaz mein ye last baat sunna. 🫀</p>
+      <audio class="voice-note" controls><source src="audio/video_261005_073207.mp3" type="audio/mpeg"></audio>
     </div>
 
-  </div>
+    <!-- ENDING -->
 
-  <!-- PHOTO 05 — UNCHANGED -->
-
-  <div class="secret-photo-card reveal-soft">
-
-    <img
-      src="photos/834420775_1790502455303832_9050202259590965079_n.webp"
-      alt="Our memory 05">
-
-    <div class="secret-photo-caption">
-      Humari kahani ke kuch aur khoobsurat pal.
+    <div class="secret-ending reveal-soft">
+      <p>Some memories become pictures.</p>
+      <p>Some become stories.</p>
+      <p>And some… become a part of you.</p>
+      <p class="final-line">Thank you for being my favourite part of these two years. ❤️</p>
+      <p class="final-line">I love you, Sahiba.</p>
+      <p class="cute-world">My Cute World. 🫀🌍</p>
     </div>
-
   </div>
-
-  <!-- PHOTO 06 — UNCHANGED -->
-
-  <div class="secret-photo-card reveal-soft">
-
-    <img
-      src="photos/833964935_1094658093318842_8566956730759267504_n.webp"
-      alt="Our memory 06">
-
-    <div class="secret-photo-caption">
-      Aur ye memory… sirf meri favourite person ke naam.
-    </div>
-
-  </div>
-
-</div>
-
-<!-- SIX SECRET VIDEOS -->
-
-<div class="memory-title reveal-soft">
-  Little Moments
-</div>
-
-<div class="secret-video-list">
-
-  <!-- VIDEO 01 — UNCHANGED -->
-
-  <div class="secret-video-card reveal-soft">
-
-    <video
-      class="memory-video"
-      controls
-      playsinline
-      preload="metadata">
-
-      <source
-        src="video/IMG_0085.MP4"
-        type="video/mp4">
-
-    </video>
-
-    <div class="video-caption">
-      Kuch moments bas dobara jeene ke liye hote hain.
-    </div>
-
-  </div>
-
-  <!-- VIDEO 02 — FINAL UPDATED FILE -->
-
-  <div class="secret-video-card reveal-soft">
-
-    <video
-      class="memory-video"
-      controls
-      playsinline
-      preload="metadata">
-
-      <source
-        src="video/VID-20261005-WA0103.mp4"
-        type="video/mp4">
-
-    </video>
-
-    <div class="video-caption">
-      Tum… meri favourite memories ka sabse khoobsurat hissa ho.
-    </div>
-
-  </div>
-
-  <!-- VIDEO 03 — FINAL UPDATED FILE -->
-
-  <div class="secret-video-card reveal-soft">
-
-    <video
-      class="memory-video"
-      controls
-      playsinline
-      preload="metadata">
-
-      <source
-        src="video/VID-20261005-WA0104.mp4"
-        type="video/mp4">
-
-    </video>
-
-    <div class="video-caption">
-      Ek aur moment jo main kabhi bhoolna nahi chahta.
-    </div>
-
-  </div>
-
-  <!-- VIDEO 04 — UNCHANGED -->
-
-  <div class="secret-video-card reveal-soft">
-
-    <video
-      class="memory-video"
-      controls
-      playsinline
-      preload="metadata">
-
-      <source
-        src="video/VID-20261005-WA0012.mp4"
-        type="video/mp4">
-
-    </video>
-
-    <div class="video-caption">
-      Do saal… aur itni saari memories.
-    </div>
-
-  </div>
-
-  <!-- VIDEO 05 — UNCHANGED -->
-
-  <div class="secret-video-card reveal-soft">
-
-    <video
-      class="memory-video"
-      controls
-      playsinline
-      preload="metadata">
-
-      <source
-        src="video/VID-20261005-WA0027.mp4"
-        type="video/mp4">
-
-    </video>
-
-    <div class="video-caption">
-      Distance ke bawajood, tum hamesha mere qareeb hoo.
-    </div>
-
-  </div>
-
-  <!-- VIDEO 06 — UNCHANGED -->
-
-  <div class="secret-video-card reveal-soft">
-
-    <video
-      class="memory-video"
-      controls
-      playsinline
-      preload="metadata">
-
-      <source
-        src="video/VID-20261005-WA0035.mp4"
-        type="video/mp4">
-
-    </video>
-
-    <div class="video-caption">
-      Aur ye… humari kahani ka ek aur chota sa hisa.
-    </div>
-
-  </div>
-
-  <!-- VIDEO 07 — BIRTHDAY AI VIDEO -->
-
-  <div class="secret-video-card birthday-video-card reveal-soft">
-
-    <div class="memory-title">
-      Birthday Video
-    </div>
-
-    <video
-      class="birthday-video"
-      controls
-      playsinline
-      preload="metadata">
-
-      <source
-        src="video/Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4"
-        type="video/mp4">
-
-      Your browser does not support video playback.
-
-    </video>
-
-    <a
-      href="video/Happy%20birthday%20to%20you%20My%20Cute%20World%28720P_HD%29.mp4"
-      download
-      style="display:inline-flex;align-items:center;justify-content:center;margin:18px 10px 0;padding:12px 20px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#fff;text-decoration:none;font-family:Arial,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;">
-
-      Download Birthday Video
-
-    </a>
-
-    <div class="video-caption">
-      Ye birthday… aur tumhare liye banayi hui ek choti si duniya. ❤️
-    </div>
-
-  </div>
-
-</div>
-
-<!-- SECRET VOICE NOTE 03 -->
-
-<div class="secret-voice reveal-soft">
-
-  <div class="eyebrow">
-    Secret Voice Note 03
-  </div>
-
-  <h3>
-    Bas ek baat aur…
-  </h3>
-
-  <p>
-    Ab ye sab dekhne ke baad,
-    meri awaaz mein ye last baat sunna. 🫀
-  </p>
-
-  <audio class="voice-note" controls>
-
-    <source
-      src="audio/video_261005_073207.mp3"
-      type="audio/mpeg">
-
-  </audio>
-
-</div>
-
-<!-- ENDING -->
-
-<div class="secret-ending reveal-soft">
-
-  <p>
-    Some memories become pictures.
-  </p>
-
-  <p>
-    Some become stories.
-  </p>
-
-  <p>
-    And some… become a part of you.
-  </p>
-
-  <p class="final-line">
-    Thank you for being my favourite part of these two years. ❤️
-  </p>
-
-  <p class="final-line">
-    I love you, Sahiba.
-  </p>
-
-  <p class="cute-world">
-    My Cute World. 🫀🌍
-  </p>
-
-</div>
-
-  </div>
-
 </section>
 
 <script>
+/* BACKGROUND MUSIC */
 
-/* ==========================================
-BACKGROUND MUSIC
-========================================== */
-
-const backgroundMusic =
-document.getElementById("backgroundMusic");
-
-const musicToggle =
-document.getElementById("musicToggle");
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicToggle = document.getElementById("musicToggle");
 
 let musicStarted = false;
 let musicWasPlayingBeforeVoice = false;
 let musicWasPlayingBeforeVideo = false;
 
-/* MUSIC START */
-
 function startBackgroundMusic(){
+  if(!backgroundMusic) return;
+  backgroundMusic.loop = true;
 
-if(!backgroundMusic) return;
+  const playPromise = backgroundMusic.play();
 
-backgroundMusic.loop = true;
-
-const playPromise =
-backgroundMusic.play();
-
-if(playPromise !== undefined){
-
-playPromise
-  .then(function(){
-
-    musicStarted = true;
-    updateMusicButton();
-
-  })
-  .catch(function(){});
-
+  if(playPromise !== undefined){
+    playPromise.then(function(){
+      musicStarted = true;
+      updateMusicButton();
+    }).catch(function(){});
+  }
 }
-
-}
-
-/* MUSIC BUTTON */
 
 function updateMusicButton(){
+  if(!musicToggle || !backgroundMusic) return;
 
-if(!musicToggle || !backgroundMusic) return;
-
-if(backgroundMusic.paused){
-
-musicToggle.textContent = "♪";
-
-musicToggle.setAttribute(
-  "aria-label",
-  "Play background music"
-);
-
-}else{
-
-musicToggle.textContent = "♫";
-
-musicToggle.setAttribute(
-  "aria-label",
-  "Pause background music"
-);
-
+  if(backgroundMusic.paused){
+    musicToggle.textContent = "♪";
+    musicToggle.setAttribute("aria-label","Play background music");
+  }else{
+    musicToggle.textContent = "♫";
+    musicToggle.setAttribute("aria-label","Pause background music");
+  }
 }
-
-}
-
-/* VOICE MUSIC PAUSE */
 
 function pauseBackgroundForVoice(){
-
-if(!backgroundMusic) return;
-
-musicWasPlayingBeforeVoice =
-!backgroundMusic.paused;
-
-if(musicWasPlayingBeforeVoice){
-
-backgroundMusic.pause();
-
+  if(!backgroundMusic) return;
+  musicWasPlayingBeforeVoice = !backgroundMusic.paused;
+  if(musicWasPlayingBeforeVoice) backgroundMusic.pause();
+  updateMusicButton();
 }
-
-updateMusicButton();
-
-}
-
-/* VOICE MUSIC RESUME */
 
 function resumeBackgroundAfterVoice(){
+  if(!backgroundMusic) return;
 
-if(!backgroundMusic) return;
+  if(musicWasPlayingBeforeVoice && !musicWasPlayingBeforeVideo){
+    backgroundMusic.play().catch(function(){});
+  }
 
-if(
-musicWasPlayingBeforeVoice &&
-!musicWasPlayingBeforeVideo
-){
-
-backgroundMusic.play().catch(function(){});
-
+  musicWasPlayingBeforeVoice = false;
+  updateMusicButton();
 }
-
-musicWasPlayingBeforeVoice = false;
-
-updateMusicButton();
-
-}
-
-/* VIDEO MUSIC PAUSE */
 
 function pauseBackgroundForVideo(){
-
-if(!backgroundMusic) return;
-
-musicWasPlayingBeforeVideo =
-!backgroundMusic.paused;
-
-if(musicWasPlayingBeforeVideo){
-
-backgroundMusic.pause();
-
+  if(!backgroundMusic) return;
+  musicWasPlayingBeforeVideo = !backgroundMusic.paused;
+  if(musicWasPlayingBeforeVideo) backgroundMusic.pause();
+  updateMusicButton();
 }
-
-updateMusicButton();
-
-}
-
-/* VIDEO MUSIC RESUME */
 
 function resumeBackgroundAfterVideo(){
+  if(!backgroundMusic) return;
 
-if(!backgroundMusic) return;
+  if(musicWasPlayingBeforeVideo && !musicWasPlayingBeforeVoice){
+    backgroundMusic.play().catch(function(){});
+  }
 
-if(
-musicWasPlayingBeforeVideo &&
-!musicWasPlayingBeforeVoice
-){
-
-backgroundMusic.play().catch(function(){});
-
+  musicWasPlayingBeforeVideo = false;
+  updateMusicButton();
 }
 
-musicWasPlayingBeforeVideo = false;
-
-updateMusicButton();
-
-}
-
-/* MUSIC TOGGLE */
-
-musicToggle.addEventListener(
-"click",
-function(){
-
-if(backgroundMusic.paused){
-
-  backgroundMusic.play().catch(function(){});
-
-}else{
-
-  backgroundMusic.pause();
-
-}
-
-updateMusicButton();
-
-}
-);
+musicToggle.addEventListener("click",function(){
+  if(backgroundMusic.paused){
+    backgroundMusic.play().catch(function(){});
+  }else{
+    backgroundMusic.pause();
+  }
+  updateMusicButton();
+});
 
 /* FIRST USER INTERACTION */
 
 function firstInteractionMusic(){
+  if(!musicStarted && backgroundMusic.paused) startBackgroundMusic();
+  musicStarted = true;
 
-if(
-!musicStarted &&
-backgroundMusic.paused
-){
-
-startBackgroundMusic();
-
+  document.removeEventListener("click",firstInteractionMusic);
+  document.removeEventListener("touchstart",firstInteractionMusic);
+  document.removeEventListener("pointerdown",firstInteractionMusic);
 }
 
-musicStarted = true;
-
-document.removeEventListener(
-"click",
-firstInteractionMusic
-);
-
-document.removeEventListener(
-"touchstart",
-firstInteractionMusic
-);
-
-document.removeEventListener(
-"pointerdown",
-firstInteractionMusic
-);
-
-}
-
-document.addEventListener(
-"click",
-firstInteractionMusic,
-{passive:true}
-);
-
-document.addEventListener(
-"touchstart",
-firstInteractionMusic,
-{passive:true}
-);
-
-document.addEventListener(
-"pointerdown",
-firstInteractionMusic,
-{passive:true}
-);
+document.addEventListener("click",firstInteractionMusic,{passive:true});
+document.addEventListener("touchstart",firstInteractionMusic,{passive:true});
+document.addEventListener("pointerdown",firstInteractionMusic,{passive:true});
 
 /* VOICE NOTES */
 
-document
-.querySelectorAll(".voice-note")
-.forEach(function(audio){
-
-audio.addEventListener(
-  "play",
-  function(){
-
-    document
-      .querySelectorAll(".voice-note")
-      .forEach(function(otherAudio){
-
-        if(
-          otherAudio !== audio &&
-          !otherAudio.paused
-        ){
-
-          otherAudio.pause();
-
-        }
-
-      });
+document.querySelectorAll(".voice-note").forEach(function(audio){
+  audio.addEventListener("play",function(){
+    document.querySelectorAll(".voice-note").forEach(function(otherAudio){
+      if(otherAudio !== audio && !otherAudio.paused) otherAudio.pause();
+    });
 
     pauseBackgroundForVoice();
 
-    const card =
-      audio.closest(
-        ".voice-card, .secret-voice"
-      );
+    const card = audio.closest(".voice-card, .secret-voice");
+    if(card) card.classList.add("audio-playing");
+  });
 
-    if(card){
-
-      card.classList.add(
-        "audio-playing"
-      );
-
-    }
-
-  }
-);
-
-audio.addEventListener(
-  "pause",
-  function(){
-
+  audio.addEventListener("pause",function(){
     resumeBackgroundAfterVoice();
+    const card = audio.closest(".voice-card, .secret-voice");
+    if(card) card.classList.remove("audio-playing");
+  });
 
-    const card =
-      audio.closest(
-        ".voice-card, .secret-voice"
-      );
-
-    if(card){
-
-      card.classList.remove(
-        "audio-playing"
-      );
-
-    }
-
-  }
-);
-
-audio.addEventListener(
-  "ended",
-  function(){
-
+  audio.addEventListener("ended",function(){
     resumeBackgroundAfterVoice();
-
-    const card =
-      audio.closest(
-        ".voice-card, .secret-voice"
-      );
-
-    if(card){
-
-      card.classList.remove(
-        "audio-playing"
-      );
-
-    }
-
-  }
-);
-
+    const card = audio.closest(".voice-card, .secret-voice");
+    if(card) card.classList.remove("audio-playing");
+  });
 });
 
 /* VIDEOS */
 
-const allMemoryVideos =
-document.querySelectorAll(
-".memory-video, .birthday-video"
-);
+const allMemoryVideos = document.querySelectorAll(".memory-video, .birthday-video");
 
-allMemoryVideos.forEach(
-function(video){
-
-video.addEventListener(
-  "play",
-  function(){
-
-    allMemoryVideos.forEach(
-      function(otherVideo){
-
-        if(
-          otherVideo !== video &&
-          !otherVideo.paused
-        ){
-
-          otherVideo.pause();
-
-        }
-
-      }
-    );
-
+allMemoryVideos.forEach(function(video){
+  video.addEventListener("play",function(){
+    allMemoryVideos.forEach(function(otherVideo){
+      if(otherVideo !== video && !otherVideo.paused) otherVideo.pause();
+    });
     pauseBackgroundForVideo();
+  });
 
-  }
-);
-
-video.addEventListener(
-  "pause",
-  function(){
-
+  video.addEventListener("pause",function(){
     resumeBackgroundAfterVideo();
+  });
 
-  }
-);
-
-video.addEventListener(
-  "ended",
-  function(){
-
+  video.addEventListener("ended",function(){
     resumeBackgroundAfterVideo();
-
-  }
-);
-
-}
-);
+  });
+});
 
 /* SCROLL REVEALS */
 
-const revealElements =
-document.querySelectorAll(
-".reveal, .reveal-soft"
-);
+const revealElements = document.querySelectorAll(".reveal, .reveal-soft");
 
-const revealObserver =
-new IntersectionObserver(
-function(entries,observer){
-
-entries.forEach(
-    function(entry){
-
-      if(entry.isIntersecting){
-
-        entry.target.classList.add(
-          "visible"
-        );
-
-        observer.unobserve(
-          entry.target
-        );
-
-      }
-
+const revealObserver = new IntersectionObserver(function(entries,observer){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
     }
-  );
-
-},
-{
+  });
+},{
   threshold:0.12,
   rootMargin:"0px 0px -60px 0px"
-}
+});
 
-);
-
-revealElements.forEach(
-function(element,index){
-
-element.style.transitionDelay =
-  Math.min(
-    index * 0.055,
-    0.45
-  ) + "s";
-
-revealObserver.observe(
-  element
-);
-
-}
-);
+revealElements.forEach(function(element,index){
+  element.style.transitionDelay = Math.min(index * 0.055,0.45) + "s";
+  revealObserver.observe(element);
+});
 
 /* SECRET PAGE */
 
-const secretButton =
-document.getElementById(
-"secretButton"
-);
-
-const secretGate =
-document.getElementById(
-"secret-gate"
-);
-
-const secretPage =
-document.getElementById(
-"secret-page"
-);
+const secretButton = document.getElementById("secretButton");
+const secretGate = document.getElementById("secret-gate");
+const secretPage = document.getElementById("secret-page");
 
 function unlockSecret(){
-
-document
-.querySelectorAll(
-".memory-video, .birthday-video"
-)
-.forEach(function(video){
-
-if(!video.paused){
-
-    video.pause();
-
-  }
-
-});
-
-secretGate.style.transition =
-"opacity 1s ease, transform 1s ease, filter 1s ease";
-
-secretGate.style.opacity = "0";
-
-secretGate.style.transform =
-"scale(.97)";
-
-secretGate.style.filter =
-"blur(8px)";
-
-setTimeout(
-function(){
-
-secretGate.style.display =
-    "none";
-
-  secretPage.style.display =
-    "flex";
-
-  window.scrollTo({
-    top:0,
-    behavior:"auto"
+  document.querySelectorAll(".memory-video, .birthday-video").forEach(function(video){
+    if(!video.paused) video.pause();
   });
 
-  setTimeout(
-    function(){
+  secretGate.style.transition = "opacity 1s ease, transform 1s ease, filter 1s ease";
+  secretGate.style.opacity = "0";
+  secretGate.style.transform = "scale(.97)";
+  secretGate.style.filter = "blur(8px)";
 
-      const secretElements =
-        secretPage.querySelectorAll(
-          ".reveal-soft"
-        );
+  setTimeout(function(){
+    secretGate.style.display = "none";
+    secretPage.style.display = "flex";
 
-      secretElements.forEach(
-        function(element,index){
+    window.scrollTo({top:0,behavior:"auto"});
 
-          setTimeout(
-            function(){
+    setTimeout(function(){
+      const secretElements = secretPage.querySelectorAll(".reveal-soft");
 
-              element.classList.add(
-                "visible"
-              );
-
-            },
-            index * 120
-          );
-
-        }
-      );
-
-    },
-    100
-  );
-
-},
-900
-
-);
-
+      secretElements.forEach(function(element,index){
+        setTimeout(function(){
+          element.classList.add("visible");
+        },index * 120);
+      });
+    },100);
+  },900);
 }
 
-secretButton.addEventListener(
-"click",
-unlockSecret
-);
+secretButton.addEventListener("click",unlockSecret);
+
+/* MAKE A WISH */
+
+const wishCake = document.getElementById("wishCake");
+const wishMessage = document.getElementById("wishMessage");
+
+function makeWish(){
+  if(!wishCake || !wishMessage) return;
+  if(wishCake.classList.contains("wish-complete")) return;
+
+  wishCake.classList.add("wish-complete");
+
+  for(let i=0;i<12;i++){
+    const spark = document.createElement("span");
+    spark.textContent = i%2===0 ? "✦" : "·";
+    spark.style.position = "absolute";
+    spark.style.left = "50%";
+    spark.style.top = "25%";
+    spark.style.zIndex = "20";
+    spark.style.pointerEvents = "none";
+    spark.style.color = "#f6d36a";
+    spark.style.fontSize = (10 + Math.random()*12) + "px";
+    spark.style.opacity = "1";
+    spark.style.transform = "translate(-50%,-50%) scale(.4)";
+
+    const angle = (Math.PI*2*i)/12;
+    const distance = 55 + Math.random()*65;
+
+    spark.animate([
+      {
+        transform:"translate(-50%,-50%) scale(.4)",
+        opacity:1
+      },
+      {
+        transform:"translate("+
+          ((Math.cos(angle)*distance)-50)+
+          "px,"+
+          ((Math.sin(angle)*distance)-50)+
+          "px) scale(1)",
+        opacity:0
+      }
+    ],{
+      duration:1100,
+      easing:"cubic-bezier(.2,.8,.2,1)"
+    });
+
+    wishCake.appendChild(spark);
+
+    setTimeout(function(){spark.remove()},1150);
+  }
+
+  setTimeout(function(){
+    wishMessage.classList.add("visible");
+    wishMessage.scrollIntoView({behavior:"smooth",block:"center"});
+  },650);
+}
+
+if(wishCake){
+  wishCake.addEventListener("click",makeWish);
+
+  wishCake.addEventListener("keydown",function(event){
+    if(event.key==="Enter" || event.key===" "){
+      event.preventDefault();
+      makeWish();
+    }
+  });
+}
 
 /* INITIAL MUSIC */
 
-window.addEventListener(
-"load",
-function(){
-
-updateMusicButton();
-
-startBackgroundMusic();
-
-}
-);
-
+window.addEventListener("load",function(){
+  updateMusicButton();
+  startBackgroundMusic();
+});
 </script>
 
 </body>
